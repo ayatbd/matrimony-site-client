@@ -1,0 +1,43 @@
+.navHero-bg {
+    background-image: url(../../assets/images/hero-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    min-height: 4.5rem;
+}
+
+.bg-base-100 {
+    --tw-bg-opacity: 1;
+    background-color: unset;
+}
+
+.signin-button {
+    background-color: white;
+    color: #E33283;
+    border-radius: 25px;
+    padding: 8px 20px;
+    display: block;
+    height: auto;
+    line-height: 1.45em;
+}
+
+.createBio-bg {
+    background-image: url(../../assets/images/create-bio-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ____________common css_____________ */
+.pink {
+    color: #E33283;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #E33283 0%, #530E29 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
