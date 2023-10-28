@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const SignIn = () => {
+const Registration = () => {
   return (
     <div className="relative py-24 bg-gradient-to-br from-sky-50 to-gray-200">
       <div className="relative container m-auto px-6 text-gray-500 md:px-12 xl:px-40">
@@ -12,9 +12,18 @@ const SignIn = () => {
                 </h2>
                 <form className="mt-6" action="#" method="POST">
                   <div>
-                    <label className="block text-[#530E29]">
-                      Email Address
-                    </label>
+                    <label className="block text-[#530E29]">Name</label>
+                    <input
+                      type="name"
+                      name=""
+                      id=""
+                      placeholder="Enter Your Name"
+                      className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[#530E29]">Email</label>
                     <input
                       type="email"
                       name=""
@@ -33,34 +42,40 @@ const SignIn = () => {
                       id=""
                       placeholder="Enter Password"
                       className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
-                      focus:bg-white focus:outline-none"
+                focus:bg-white focus:outline-none"
                       required
                     />
                   </div>
 
-                  <div className="text-right mt-2">
-                    <a
-                      href="#"
-                      className="text-sm font-semibold text-[#530E29] hover:text-blue-700 focus:text-blue-700"
-                    >
-                      Forgot Password?
-                    </a>
+                  <div className="mt-4">
+                    <label className="block text-[#530E29]">
+                      Confirm Password
+                    </label>
+                    <input
+                      type="password"
+                      name=""
+                      id=""
+                      placeholder="Please Confirm Password"
+                      className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                focus:bg-white focus:outline-none"
+                      required
+                    />
                   </div>
 
                   <button
                     type="submit"
                     className="w-full block bg-gradient-to-r from-[#493240] to-[#FF0099] hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-full
-                    px-4 py-3 mt-6"
+              px-4 py-3 mt-6"
                   >
-                    Sign In
+                    Create Account
                   </button>
                 </form>
               </div>
               <div className="divider my-6">OR</div>
               <div className="grid space-y-4">
                 <button
-                  className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300
-       hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
+                  className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
+ hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
                 >
                   <div className="relative flex items-center space-x-4 justify-center">
                     <img
@@ -74,16 +89,16 @@ const SignIn = () => {
                   </div>
                 </button>
                 <p className="text-center text-black mt-7">
-                  Don't have an account?
+                  Already have an account?
                 </p>
                 <button
-                  className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300
-                                           hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
+                  className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
+                                     hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
                 >
                   <div className="relative flex items-center space-x-4 justify-center">
-                    <Link to="/registration">
+                    <Link to="/signin">
                       <span className="block w-max font-semibold tracking-wide text-[#530E29] text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">
-                        + Create an Account
+                        + Sign In to Your to Account
                       </span>
                     </Link>
                   </div>
@@ -97,4 +112,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default Registration;

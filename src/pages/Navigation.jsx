@@ -28,17 +28,19 @@ const Navigation = () => {
               <Link className="text-xl">Guide</Link>
             </ul>
             <ul>
-              <Link className="text-xl">Contact</Link>
+              <Link to="/contact" className="text-xl">
+                Contact
+              </Link>
             </ul>
           </div>
         </div>
 
         <div className="navbar-end gap-4">
           <button className="text-xl bg-[#E33283] text-white rounded-full py-2 px-6">
-            Registration
+            <Link to="/registration">Registration</Link>
           </button>
           <button className="text-xl text-[#E33283] py-2 px-6 rounded-full border border-[#E33283]">
-            <Link to="/login">Sign In</Link>
+            <Link to="/signin">Sign In</Link>
           </button>
         </div>
       </div>
