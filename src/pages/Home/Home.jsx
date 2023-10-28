@@ -1,4 +1,4 @@
-import HeroSection from "../Shared/HeroSection";
+import HeroSection from "./HeroSection";
 import CreateBio from "./CreateBio";
 import Finding from "./Finding";
 import QuickAccess from "./QuickAccess";

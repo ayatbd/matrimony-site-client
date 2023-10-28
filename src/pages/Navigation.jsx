@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logos/logo.png";
-import "../css/page.css";
-import Container from "./Container";
+import logo from "../assets/images/logos/logo.png";
+import "../pages/css/page.css";
+import Container from "./Shared/Container";
 const Navigation = () => {
   return (
     <Container>
@@ -38,7 +38,7 @@ const Navigation = () => {
             Registration
           </button>
           <button className="text-xl text-[#E33283] py-2 px-6 rounded-full border border-[#E33283]">
-            Sign In
+            <Link to="/login">Sign In</Link>
           </button>
         </div>
       </div>

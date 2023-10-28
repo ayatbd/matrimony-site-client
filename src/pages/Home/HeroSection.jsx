@@ -1,11 +1,12 @@
-import Container from "./Container";
+import Container from "../Shared/Container";
 import flower from "../../assets/images/flower.png";
+import img1 from "../../assets/images/hero-img1.avif";
 
 const HeroSection = () => {
   return (
     <div className="navHero-bg w-full h-[90vh]">
       <Container>
-        <div className="flex flex-col gap-14 items-start pt-28">
+        <div className="flex flex-col gap-11 items-start pt-24">
           <h1 className="text-4xl text-white font-bold">
             Bangladeshi Muslim <br /> <span className="pink">Matrimony</span>
           </h1>
@@ -16,27 +17,27 @@ const HeroSection = () => {
           <div className="avatar-group -space-x-6">
             <div className="avatar">
               <div className="w-12">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src={img1} />
               </div>
             </div>
             <div className="avatar">
               <div className="w-12">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src={img1} />
               </div>
             </div>
             <div className="avatar">
               <div className="w-12">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src={img1} />
               </div>
             </div>
             <div className="avatar">
               <div className="w-12">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src={img1} />
               </div>
             </div>
             <div className="avatar">
               <div className="w-12">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src={img1} />
               </div>
             </div>
           </div>
