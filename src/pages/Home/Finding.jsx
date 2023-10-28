@@ -1,8 +1,9 @@
 import Container from "../Shared/Container";
+import "../css/page.css";
 
 const Finding = () => {
   return (
-    <div>
+    <div className="find-bg">
       <Container>
         <div className="py-7">
           <div>
@@ -12,26 +13,30 @@ const Finding = () => {
           </div>
           <div>
             <form>
-              <div className="flex items-center justify-between pt-9">
-                <div>
+              <div className="flex items-center justify-between gap-5 pt-9">
+                <div className="w-full">
                   <select className="w-full px-4 py-2 rounded-md border">
                     <option disabled selected>
                       I'm looking for
                     </option>
-                    <option>Male</option>
-                    <option>Female</option>
+                    <option>Male's Biodata</option>
+                    <option>Female's Biodata</option>
                   </select>
                 </div>
-                <div>
+                <div className="w-full">
                   <select className="w-full px-4 py-2 rounded-md border">
                     <option disabled selected>
                       Marital Status
                     </option>
-                    <option>English</option>
-                    <option>French</option>
+                    <option>All</option>
+                    <option>Never Married</option>
+                    <option>Married</option>
+                    <option>Divorced</option>
+                    <option>Widow</option>
+                    <option>Widower</option>
                   </select>
                 </div>
-                <div>
+                <div className="w-full">
                   <select className="w-full px-4 py-2 rounded-md border">
                     <option disabled selected>
                       Select an address
@@ -40,8 +45,10 @@ const Finding = () => {
                     <option>French</option>
                   </select>
                 </div>
-                <div>
-                  <input type="btn" value="Search" />
+                <div className="w-full">
+                  <button className="w-full text-xl bg-[#E33283] text-white rounded-md py-2 px-6">
+                    Search
+                  </button>
                 </div>
               </div>
             </form>

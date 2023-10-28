@@ -1,4 +1,5 @@
 import Container from "./Container";
+import flower from "../../assets/images/flower.png";
 
 const HeroSection = () => {
   return (
@@ -39,6 +40,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+          <img className="w-28 h-28" src={flower} alt="" />
         </div>
       </Container>
     </div>

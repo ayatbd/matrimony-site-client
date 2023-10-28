@@ -31,6 +31,13 @@
     background-repeat: no-repeat;
 }
 
+.find-bg {
+    background-image: url(../../assets/images/gradient1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* ____________common css_____________ */
 .pink {
     color: #E33283;
@@ -40,4 +47,8 @@
     background: linear-gradient(to right, #E33283 0%, #530E29 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.bottom-shadow {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
