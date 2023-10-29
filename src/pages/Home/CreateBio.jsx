@@ -18,7 +18,7 @@ const CreateBio = () => {
           <div className="flex items-center justify-center gap-10">
             <button>
               <Link>
-                <span className="border rounded-xl px-5 py-7 flex gap-4 flex-col items-center justify-center">
+                <span className="border bottom-shadow rounded-xl px-5 py-7 flex gap-4 flex-col items-center justify-center">
                   <FcEditImage size="45" />
                   <p className="pink font-bold">+ Create Your Biodata</p>
                 </span>
@@ -26,7 +26,7 @@ const CreateBio = () => {
             </button>
             <button>
               <Link>
-                <span className="border rounded-xl px-5 py-7 flex gap-4 flex-col items-center justify-center">
+                <span className="border bottom-shadow rounded-xl px-5 py-7 flex gap-4 flex-col items-center justify-center">
                   <FaYoutube color="red" size="45" />
                   <p className="pink font-bold">+ How to Create Biodata</p>
                 </span>

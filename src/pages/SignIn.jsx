@@ -39,17 +39,14 @@ const SignIn = () => {
                   </div>
 
                   <div className="text-right mt-2">
-                    <a
-                      href="#"
-                      className="text-sm font-semibold text-[#530E29] hover:text-blue-700 focus:text-blue-700"
-                    >
+                    <Link className="text-sm font-semibold text-[#530E29] hover:text-blue-700 focus:text-blue-700">
                       Forgot Password?
-                    </a>
+                    </Link>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full block bg-gradient-to-r from-[#493240] to-[#FF0099] hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-full
+                    className="w-full bottom-shadow block bg-gradient-to-r from-[#493240] to-[#FF0099] hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-full
                     px-4 py-3 mt-6"
                   >
                     Sign In

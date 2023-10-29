@@ -42,10 +42,10 @@ const Navigation = () => {
         </div>
 
         <div className="navbar-end gap-4">
-          <button className="text-xl bg-[#E33283] text-white rounded-full py-2 px-6">
+          <button className="text-xl bottom-shadow bg-[#E33283] text-white rounded-full py-2 px-6">
             <Link to="/registration">Registration</Link>
           </button>
-          <button className="text-xl text-[#E33283] py-2 px-6 rounded-full border border-[#E33283]">
+          <button className="text-xl bottom-shadow text-[#E33283] py-2 px-6 rounded-full border border-[#E33283]">
             <Link to="/signin">Sign In</Link>
           </button>
         </div>

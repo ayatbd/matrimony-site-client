@@ -4,6 +4,7 @@ import img1 from "../../assets/images/hero-img1.avif";
 import img2 from "../../assets/images/hero-img2.jpg";
 import img3 from "../../assets/images/hero-img3.jpg";
 import img4 from "../../assets/images/hero-img4.jpg";
+import { AiFillStar } from "react-icons/ai";
 
 const HeroSection = () => {
   return (
@@ -44,7 +45,30 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <img className="w-28 h-28" src={flower} alt="" />
+          <div className="flex items-center gap-4">
+            <img className="w-28 h-28" src={flower} alt="" />
+            <div className="flex items-center gap-3">
+              <AiFillStar size="28" className="pink" />
+              <ul className="flex items-center gap-[2px]">
+                <li className="text-white bg-[#E33283] p-[2px] rounded-sm">
+                  <AiFillStar />
+                </li>
+                <li className="text-white bg-[#E33283] p-[2px] rounded-sm">
+                  <AiFillStar />
+                </li>
+                <li className="text-white bg-[#E33283] p-[2px] rounded-sm">
+                  <AiFillStar />
+                </li>
+                <li className="text-white bg-[#E33283] p-[2px] rounded-sm">
+                  <AiFillStar />
+                </li>
+                <li className="text-white bg-[#E33283] p-[2px] rounded-sm">
+                  <AiFillStar />
+                </li>
+              </ul>
+              <span className="text-white">4.5/5</span>
+            </div>
+          </div>
         </div>
       </Container>
     </div>

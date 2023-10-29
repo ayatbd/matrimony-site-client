@@ -64,7 +64,7 @@ const Registration = () => {
 
                   <button
                     type="submit"
-                    className="w-full block bg-gradient-to-r from-[#493240] to-[#FF0099] hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-full
+                    className="w-full block bottom-shadow bg-gradient-to-r from-[#493240] to-[#FF0099] hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-full
               px-4 py-3 mt-6"
                   >
                     Create Account

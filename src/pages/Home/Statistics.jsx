@@ -51,7 +51,7 @@ const Statistics = () => {
                 Laudantium ut, nisi cupiditate cum reprehenderit tempora
                 pariatur qui sed totam. Amet!
               </p>
-              <div className="flex items-center">
+              <div className="flex items-center gap-5">
                 <div className="flex items-center justify-center gap-1">
                   <BiPhoneCall className="bg-[#E33283] text-white border border border-indigo-600 p-2 w-8 h-8 rounded-full" />
                   <div>

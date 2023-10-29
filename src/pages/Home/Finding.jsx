@@ -46,7 +46,7 @@ const Finding = () => {
                   </select>
                 </div>
                 <div className="w-full">
-                  <button className="w-full text-xl bg-[#E33283] text-white rounded-md py-2 px-6">
+                  <button className="w-full bottom-shadow text-xl bg-[#E33283] text-white rounded-md py-2 px-6">
                     Search
                   </button>
                 </div>

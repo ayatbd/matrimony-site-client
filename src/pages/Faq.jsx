@@ -3,7 +3,7 @@ import PageBanner from "./Shared/PageBanner";
 const Faq = () => {
   return (
     <div>
-      <PageBanner heading="FAQ" />
+      <PageBanner heading="Usual Questions" />
     </div>
   );
 };
