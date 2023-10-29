@@ -3,9 +3,9 @@ import "../css/page.css";
 
 const Finding = () => {
   return (
-    <div className="find-bg">
+    <div className="bg-[#490B22] pb-1">
       <Container>
-        <div className="py-7">
+        <div className="py-10 bg-white rounded-xl px-2">
           <div>
             <h2 className="text-[#530E29] text-2xl font-bold">
               Find your right match here

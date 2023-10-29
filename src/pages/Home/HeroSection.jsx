@@ -1,6 +1,9 @@
 import Container from "../Shared/Container";
 import flower from "../../assets/images/flower.png";
 import img1 from "../../assets/images/hero-img1.avif";
+import img2 from "../../assets/images/hero-img2.jpg";
+import img3 from "../../assets/images/hero-img3.jpg";
+import img4 from "../../assets/images/hero-img4.jpg";
 
 const HeroSection = () => {
   return (
@@ -22,17 +25,17 @@ const HeroSection = () => {
             </div>
             <div className="avatar">
               <div className="w-12">
-                <img src={img1} />
+                <img src={img3} />
               </div>
             </div>
             <div className="avatar">
               <div className="w-12">
-                <img src={img1} />
+                <img src={img4} />
               </div>
             </div>
             <div className="avatar">
               <div className="w-12">
-                <img src={img1} />
+                <img src={img2} />
               </div>
             </div>
             <div className="avatar">

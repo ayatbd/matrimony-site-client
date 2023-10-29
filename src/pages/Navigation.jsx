@@ -19,13 +19,19 @@ const Navigation = () => {
               <Link className="text-xl">Home</Link>
             </ul>
             <ul>
-              <Link className="text-xl">About Us</Link>
+              <Link to="/about" className="text-xl">
+                About Us
+              </Link>
             </ul>
             <ul>
-              <Link className="text-xl">FAQ</Link>
+              <Link to="/faq" className="text-xl">
+                FAQ
+              </Link>
             </ul>
             <ul>
-              <Link className="text-xl">Guide</Link>
+              <Link to="/guid" className="text-xl">
+                Guide
+              </Link>
             </ul>
             <ul>
               <Link to="/contact" className="text-xl">
