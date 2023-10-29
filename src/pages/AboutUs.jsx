@@ -8,8 +8,8 @@ const AboutUs = () => {
       <Container>
         <div className="py-16">
           <div>
-            <p className="text-[20px] text-center mb-4">
-              Bismillahir rah manir harihim
+            <p className="text-[20px] text-center mb-8">
+              بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
             </p>
           </div>
           <div>
