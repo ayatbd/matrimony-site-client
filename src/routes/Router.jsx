@@ -7,14 +7,18 @@ import Contact from "../pages/Contact";
 import AboutUs from "../pages/AboutUs";
 import Faq from "../pages/Faq";
 import Guide from "../pages/Guide";
+import ErrorPage from "../components/ErrorPage";
+import Dashboard from "../layouts/Dashboard";
+import AllUsers from "./../pages/Dashboard/AllUsers";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "/",
+        path: "/home",
         element: <Home />,
       },
       {
@@ -40,6 +44,17 @@ export const router = createBrowserRouter([
       {
         path: "guid",
         element: <Guide />,
+      },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "allusers",
+        element: <AllUsers />,
       },
     ],
   },
