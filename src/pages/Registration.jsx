@@ -1,5 +1,86 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import useAuth from "../hooks/useAuth";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { app } from "../firebase/firebase.config";
 const Registration = () => {
+  const Navigate = useNavigate();
+  // const location = useLocation();
+  const { createUser } = useAuth();
+  const from = location.state?.from?.pathname || "/";
+  const auth = getAuth(app);
+  const googleProvider = new GoogleAuthProvider();
+
+  const handleRegister = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name, email, password);
+
+    createUser(email, password)
+      .then((result) => {
+        const saveUser = { name, email };
+        fetch("https://summer-camp-server-ten-delta.vercel.app/users", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(saveUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.insertedId) {
+              Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "User created successfully.",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              Navigate("/");
+            }
+          });
+
+        const user = result.user;
+        console.log("created user", user);
+        form.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleLoginWithPopUp = () => {
+    signInWithPopup(auth, googleProvider).then((result) => {
+      const loggedInUser = result.user;
+      console.log(loggedInUser);
+      const saveUser = {
+        name: loggedInUser.displayName,
+        email: loggedInUser.email,
+      };
+      fetch("https://summer-camp-server-ten-delta.vercel.app/users", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(saveUser),
+      })
+        .then((res) => res.json())
+        .then(() => {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "User logged in successfully.",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          Navigate(from, { replace: true });
+        });
+    });
+  };
+
   return (
     <div className="relative py-24 bg-gradient-to-br from-sky-50 to-gray-200">
       <div className="relative container m-auto px-6 text-gray-500 md:px-12 xl:px-40">
@@ -10,13 +91,17 @@ const Registration = () => {
                 <h2 className="mb-8 text-2xl text-[#530E29] font-bold">
                   Sign In to Your Account
                 </h2>
-                <form className="mt-6" action="#" method="POST">
+                <form
+                  onSubmit={handleRegister}
+                  className="mt-6"
+                  action="#"
+                  method="POST"
+                >
                   <div>
                     <label className="block text-[#530E29]">Name</label>
                     <input
                       type="name"
-                      name=""
-                      id=""
+                      name="name"
                       placeholder="Enter Your Name"
                       className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
                       required
@@ -26,8 +111,7 @@ const Registration = () => {
                     <label className="block text-[#530E29]">Email</label>
                     <input
                       type="email"
-                      name=""
-                      id=""
+                      name="email"
                       placeholder="Enter Email Address"
                       className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
                       required
@@ -38,8 +122,7 @@ const Registration = () => {
                     <label className="block text-[#530E29]">Password</label>
                     <input
                       type="password"
-                      name=""
-                      id=""
+                      name="password"
                       placeholder="Enter Password"
                       className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none"
@@ -53,8 +136,7 @@ const Registration = () => {
                     </label>
                     <input
                       type="password"
-                      name=""
-                      id=""
+                      name="confirm"
                       placeholder="Please Confirm Password"
                       className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none"
@@ -74,6 +156,7 @@ const Registration = () => {
               <div className="divider my-6">OR</div>
               <div className="grid space-y-4">
                 <button
+                  onClick={handleLoginWithPopUp}
                   className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
  hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
                 >

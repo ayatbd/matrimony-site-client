@@ -3,8 +3,11 @@ import { FcEditImage } from "react-icons/fc";
 import { FaYoutube } from "react-icons/fa";
 import flower from "../../assets/images/flower.png";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const CreateBio = () => {
+  const { user } = useAuth();
+
   return (
     <div className="createBio-bg h-[100vh]">
       <Container>
@@ -17,7 +20,7 @@ const CreateBio = () => {
           <img className="w-28 h-28" src={flower} alt="" />
           <div className="flex items-center justify-center gap-10">
             <button>
-              <Link>
+              <Link to={!user && "/signin"}>
                 <span className="border bottom-shadow rounded-xl px-5 py-7 flex gap-4 flex-col items-center justify-center">
                   <FcEditImage size="45" />
                   <p className="pink font-bold">+ Create Your Biodata</p>

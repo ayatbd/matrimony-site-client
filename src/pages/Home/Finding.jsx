@@ -3,7 +3,7 @@ import "../css/page.css";
 
 const Finding = () => {
   return (
-    <div className="bg-[#490B22] pb-1">
+    <div className="bg-gradient-to-r from-[#490B22] to-[#611634] pb-1">
       <Container>
         <div className="py-10 bg-white rounded-xl px-2">
           <div>
@@ -15,8 +15,8 @@ const Finding = () => {
             <form>
               <div className="flex items-center justify-between gap-5 pt-9">
                 <div className="w-full">
-                  <select className="w-full px-4 py-2 rounded-md border">
-                    <option disabled selected>
+                  <select className="w-full px-4 py-3 rounded-md border">
+                    <option disabled defaultValue>
                       I'm looking for
                     </option>
                     <option>Male's Biodata</option>
@@ -24,8 +24,8 @@ const Finding = () => {
                   </select>
                 </div>
                 <div className="w-full">
-                  <select className="w-full px-4 py-2 rounded-md border">
-                    <option disabled selected>
+                  <select className="w-full px-4 py-3 rounded-md border">
+                    <option disabled defaultValue>
                       Marital Status
                     </option>
                     <option>All</option>
@@ -37,8 +37,8 @@ const Finding = () => {
                   </select>
                 </div>
                 <div className="w-full">
-                  <select className="w-full px-4 py-2 rounded-md border">
-                    <option disabled selected>
+                  <select className="w-full px-4 py-3 rounded-md border">
+                    <option disabled defaultValue>
                       Select an address
                     </option>
                     <option>English</option>
@@ -46,7 +46,7 @@ const Finding = () => {
                   </select>
                 </div>
                 <div className="w-full">
-                  <button className="w-full bottom-shadow text-xl bg-[#E33283] text-white rounded-md py-2 px-6">
+                  <button className="w-full bottom-shadow text-xl bg-[#E33283] text-white rounded-md py-3 px-6">
                     Search
                   </button>
                 </div>

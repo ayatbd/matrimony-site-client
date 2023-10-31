@@ -6,7 +6,7 @@ import Registration from "../pages/Registration";
 import Contact from "../pages/Contact";
 import AboutUs from "../pages/AboutUs";
 import Faq from "../pages/Faq";
-import Guid from "../pages/Guid";
+import Guide from "../pages/Guide";
 
 export const router = createBrowserRouter([
   {
@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "guid",
-        element: <Guid />,
+        element: <Guide />,
       },
     ],
   },
