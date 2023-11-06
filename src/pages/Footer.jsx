@@ -1,10 +1,12 @@
 import Container from "./Shared/Container";
+import ScrollToTop from "react-scroll-to-top";
 
 const Footer = () => {
   return (
     <div className="bg-[#522B79] ">
       <Container>
         <footer className="footer footer-center p-10 text-base-content rounded">
+          <ScrollToTop top="1000" smooth color="#6366F1" />
           <nav className="grid grid-flow-col gap-4">
             <a className="link text-white link-hover">About us</a>
             <a className="link text-white link-hover">Contact</a>

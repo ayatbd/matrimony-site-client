@@ -10,6 +10,9 @@ import Guide from "../pages/Guide";
 import ErrorPage from "../components/ErrorPage";
 import Dashboard from "../layouts/Dashboard";
 import AllUsers from "./../pages/Dashboard/AllUsers";
+import DashboardHome from "../pages/Dashboard/DashboardHome";
+import Biodata from "../pages/Dashboard/Biodata";
+import MyBioForm from "../pages/Dashboard/BioForm/MyBioForm";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +21,7 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home />,
       },
       {
@@ -53,8 +56,20 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "allusers",
+        path: "home",
+        element: <DashboardHome />,
+      },
+      {
+        path: "alluser",
         element: <AllUsers />,
+      },
+      {
+        path: "biodata",
+        element: <Biodata />,
+      },
+      {
+        path: "mybiodata",
+        element: <MyBioForm />,
       },
     ],
   },

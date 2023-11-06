@@ -27,7 +27,7 @@ const Navigation = () => {
   return (
     <div className="nav-gradient">
       <Container>
-        <div className="navbar bg-base-100">
+        <div className="navbar flex items-center justify-between bg-base-100">
           <div className="navbar-start gap-2">
             <img className="w-12 h-12" src={logo} alt="logo" />
             <p className="text-2xl font-bold">
@@ -35,10 +35,10 @@ const Navigation = () => {
               <span className="text-[#ED3284]">Wonders</span>
             </p>
           </div>
-          <div className="">
+          <div>
             <ul className="flex gap-7 items-center justify-between navbar-center">
               <li>
-                <Link to="/home" className="text-xl">
+                <Link to="/" className="text-xl">
                   Home
                 </Link>
               </li>
@@ -65,7 +65,7 @@ const Navigation = () => {
             </ul>
           </div>
           {user ? (
-            <div className="navbar-end gap-4">
+            <div className="navbar-end gap-2">
               <button
                 onClick={handleLogOut}
                 className="text-xl bottom-shadow bg-[#E33283] text-white rounded-full py-2 px-6"
