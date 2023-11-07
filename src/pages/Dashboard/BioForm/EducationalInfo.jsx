@@ -1,4 +1,4 @@
-const EducationalInfo = () => {
+const EducationalInfo = ({ register }) => {
   return (
     <div>
       <div className="mt-10 mb-5">
@@ -12,7 +12,10 @@ const EducationalInfo = () => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <select className="input input-bordered w-full">
+          <select
+            {...register("academic_medium", { required: true })}
+            className="input input-bordered w-full"
+          >
             <option>General</option>
             <option>Madrasah</option>
           </select>
@@ -26,6 +29,7 @@ const EducationalInfo = () => {
           </label>
           <input
             required
+            {...register("acad_quali", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"

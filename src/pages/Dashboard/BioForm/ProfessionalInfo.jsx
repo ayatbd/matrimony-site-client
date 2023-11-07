@@ -1,4 +1,4 @@
-const ProfessionalInfo = () => {
+const ProfessionalInfo = ({ register }) => {
   return (
     <div>
       <div className="mt-10 mb-5">
@@ -14,6 +14,7 @@ const ProfessionalInfo = () => {
           </label>
           <textarea
             required
+            {...register("about_prof", { required: true })}
             type="text"
             placeholder="Type here"
             className="textarea input-bordered w-full"
@@ -28,6 +29,7 @@ const ProfessionalInfo = () => {
           </label>
           <input
             required
+            {...register("monthly_salary", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"

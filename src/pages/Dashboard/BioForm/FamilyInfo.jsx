@@ -1,6 +1,6 @@
-const FamilyInfo = () => {
+const FamilyInfo = ({ register }) => {
   return (
-    <div>
+    <>
       <div className="mt-10 mb-5">
         <p className="font-bold text-2xl px-5">About Family</p>
       </div>
@@ -14,6 +14,8 @@ const FamilyInfo = () => {
           </label>
           <input
             required
+            name="fatherName"
+            {...register("fatherName", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"
@@ -28,6 +30,8 @@ const FamilyInfo = () => {
           </label>
           <input
             required
+            name="motherName"
+            {...register("motherName", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"
@@ -41,8 +45,9 @@ const FamilyInfo = () => {
             <span className="text-[22px] text-red-600">*</span>
           </label>
           <textarea
-            required
+            name="brotherSiter"
             type="text"
+            {...register("brotherSiter", { required: true })}
             placeholder="Type here"
             className="input input-bordered w-full"
           />
@@ -55,14 +60,14 @@ const FamilyInfo = () => {
             <span className="text-[22px] text-red-600">*</span>
           </label>
           <textarea
-            required
             type="text"
+            {...register("eco_socio_status", { required: true })}
             placeholder="Type here"
             className="input input-bordered w-full"
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

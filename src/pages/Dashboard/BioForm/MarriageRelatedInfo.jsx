@@ -1,4 +1,4 @@
-const MarriageRelatedInfo = () => {
+const MarriageRelatedInfo = ({ register }) => {
   return (
     <div>
       <div className="mt-10 mb-5">
@@ -13,6 +13,7 @@ const MarriageRelatedInfo = () => {
             <span className="text-[22px] text-red-600">*</span>
           </label>
           <input
+            {...register("guardian_agree", { required: true })}
             required
             type="text"
             placeholder="Type here"
@@ -28,6 +29,7 @@ const MarriageRelatedInfo = () => {
           </label>
           <textarea
             required
+            {...register("marriage_thinking", { required: true })}
             type="text"
             placeholder="Type here"
             className="textarea input-bordered w-full"
@@ -42,6 +44,7 @@ const MarriageRelatedInfo = () => {
           </label>
           <textarea
             required
+            {...register("f_plan_thinking", { required: true })}
             type="text"
             placeholder="Type here"
             className="textarea input-bordered w-full"

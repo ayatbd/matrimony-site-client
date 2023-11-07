@@ -22,7 +22,7 @@ const Registration = () => {
     createUser(email, password)
       .then((result) => {
         const saveUser = { name, email };
-        fetch("https://summer-camp-server-ten-delta.vercel.app/users", {
+        fetch("http://localhost:5000/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

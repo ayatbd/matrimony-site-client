@@ -92,7 +92,7 @@ const Dashboard = () => {
                   }
                 >
                   <FcDataSheet />
-                  Biodata
+                  All Biodata
                 </Link>
               </li>
             </ul>

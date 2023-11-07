@@ -1,4 +1,4 @@
-const Address = () => {
+const Address = ({ register }) => {
   return (
     <div>
       <div className="mt-10 mb-5">
@@ -14,6 +14,7 @@ const Address = () => {
           </label>
           <input
             required
+            {...register("pnt_ads_details", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"
@@ -28,6 +29,7 @@ const Address = () => {
           </label>
           <input
             required
+            {...register("pres_ads_details", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"

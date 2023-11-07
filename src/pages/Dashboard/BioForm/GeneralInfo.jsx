@@ -1,10 +1,9 @@
 import SelectZilla from "../../Home/SelectZilla";
 import Feet from "./Feet";
-import Profesion from "./Profesion";
 import Weight from "./Weight";
 import Year from "./Year";
 
-const GeneralInfo = () => {
+const GeneralInfo = ({ register }) => {
   return (
     <div>
       <div className="py-5">
@@ -19,7 +18,9 @@ const GeneralInfo = () => {
             <span className="text-[22px] text-red-600">*</span>
           </label>
           <input
+            {...register("name", { required: true })}
             required
+            name="name"
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"
@@ -32,7 +33,11 @@ const GeneralInfo = () => {
             </span>
             <span className="text-[22px] text-red-600">**</span>
           </label>
-          <select required className="input input-bordered w-full">
+          <select
+            {...register("biodata_type", { required: true })}
+            required
+            className="input input-bordered w-full"
+          >
             <option>Male's Biodata</option>
             <option>Female's Biodata</option>
           </select>
@@ -44,7 +49,10 @@ const GeneralInfo = () => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <select className="input input-bordered w-full">
+          <select
+            {...register("marital_status", { required: true })}
+            className="input input-bordered w-full"
+          >
             <option>Never Married</option>
             <option>Married</option>
             <option>Divorced</option>
@@ -59,7 +67,10 @@ const GeneralInfo = () => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <select className="input input-bordered w-full">
+          <select
+            {...register("present_ads_div", { required: true })}
+            className="input input-bordered w-full"
+          >
             <option>Dhaka Division</option>
             <option>Chottogram Division</option>
             <option>Rajshahi Division</option>
@@ -76,7 +87,10 @@ const GeneralInfo = () => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <select className="input input-bordered w-full">
+          <select
+            {...register("present_ads_dis", { required: true })}
+            className="input input-bordered w-full"
+          >
             <SelectZilla />
           </select>
         </div>
@@ -87,7 +101,10 @@ const GeneralInfo = () => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <select className="input input-bordered w-full">
+          <select
+            {...register("pnt_ads_div", { required: true })}
+            className="input input-bordered w-full"
+          >
             <option>Dhaka Division</option>
             <option>Chottogram Division</option>
             <option>Rajshahi Division</option>
@@ -104,7 +121,10 @@ const GeneralInfo = () => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <select className="input input-bordered w-full">
+          <select
+            {...register("pnt_ads_dis", { required: true })}
+            className="input input-bordered w-full"
+          >
             <SelectZilla />
           </select>
         </div>
@@ -115,7 +135,10 @@ const GeneralInfo = () => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <select className="input input-bordered w-full">
+          <select
+            {...register("born_year)", { required: true })}
+            className="input input-bordered w-full"
+          >
             <Year />
           </select>
         </div>
@@ -126,18 +149,24 @@ const GeneralInfo = () => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <select className="input input-bordered w-full">
+          <select
+            {...register("height)", { required: true })}
+            className="input input-bordered w-full"
+          >
             <Feet />
           </select>
         </div>
         <div className="form-control w-full px-5">
           <label className="label flex justify-start items-center gap-1">
             <span className="label-text text-[17px] font-[600] text-black">
-              complexion
+              Complexion
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <select className="input input-bordered w-full">
+          <select
+            {...register("complexion)", { required: true })}
+            className="input input-bordered w-full"
+          >
             <option>Very Fair</option>
             <option>Fair</option>
             <option>Black</option>
@@ -152,7 +181,10 @@ const GeneralInfo = () => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <select className="input input-bordered w-full">
+          <select
+            {...register("blood_group)", { required: true })}
+            className="input input-bordered w-full"
+          >
             <option>Unknown</option>
             <option>A+</option>
             <option>A-</option>
@@ -170,11 +202,27 @@ const GeneralInfo = () => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <select className="input input-bordered w-full">
+          <select
+            {...register("weight)", { required: true })}
+            className="input input-bordered w-full"
+          >
             <Weight />
           </select>
         </div>
-        <Profesion />
+        <div className="form-control w-full px-5">
+          <label className="label flex justify-start items-center gap-1">
+            <span className="label-text text-[17px] font-[600] text-black">
+              Profession
+            </span>
+            <span className="text-[22px] text-red-600">*</span>
+          </label>
+          <input
+            type="text"
+            {...register("profession)", { required: true })}
+            placeholder="Type here"
+            className="input input-bordered w-full"
+          />
+        </div>
       </div>
     </div>
   );

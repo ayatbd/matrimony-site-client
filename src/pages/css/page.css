@@ -81,6 +81,7 @@
 
 .textarea {
     border-radius: 5px;
+    min-height: 8rem;
 }
 
 .input:focus,

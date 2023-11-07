@@ -1,4 +1,4 @@
-const PersonalInfo = () => {
+const PersonalInfo = ({ register }) => {
   return (
     <div>
       <div className="mt-10 mb-5">
@@ -12,7 +12,10 @@ const PersonalInfo = () => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <select className="input input-bordered w-full">
+          <select
+            {...register("quran_rec_quest", { required: true })}
+            className="input input-bordered w-full"
+          >
             <option>Yes</option>
             <option>Not</option>
           </select>
@@ -26,6 +29,7 @@ const PersonalInfo = () => {
           </label>
           <input
             required
+            {...register("salah_accom", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"
@@ -40,6 +44,7 @@ const PersonalInfo = () => {
           </label>
           <input
             required
+            {...register("salah_accom_year", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"
@@ -54,6 +59,7 @@ const PersonalInfo = () => {
           </label>
           <input
             required
+            {...register("majhab_follow", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"
@@ -68,6 +74,7 @@ const PersonalInfo = () => {
           </label>
           <input
             required
+            {...register("fav_scholar", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"
@@ -82,6 +89,7 @@ const PersonalInfo = () => {
           </label>
           <input
             required
+            {...register("disease_info", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"
@@ -96,6 +104,7 @@ const PersonalInfo = () => {
           </label>
           <input
             required
+            {...register("watch_hear", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"
@@ -110,6 +119,7 @@ const PersonalInfo = () => {
           </label>
           <input
             required
+            {...register("bed_side", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"
@@ -124,6 +134,7 @@ const PersonalInfo = () => {
           </label>
           <textarea
             required
+            {...register("about_self", { required: true })}
             type="text"
             placeholder="Type here"
             className="textarea input-bordered w-full"

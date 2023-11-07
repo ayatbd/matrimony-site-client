@@ -8,21 +8,36 @@ import MarriageRelatedInfo from "./MarriageRelatedInfo";
 import ExpectedPartner from "./ExpectedPartner";
 import GeneralInfo from "./GeneralInfo";
 import "../../css/page.css";
+import { useForm } from "react-hook-form";
 
 const MyBioForm = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    // eslint-disable-next-line no-unused-vars
+    watch,
+    // eslint-disable-next-line no-unused-vars
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    reset(); // Reset the form
+  };
   return (
     <div className="w-full">
       <div className="w-full">
         <ScrollToTop top="800" color="#fff" smooth />
-        <form className="">
-          <GeneralInfo></GeneralInfo>
-          <FamilyInfo></FamilyInfo>
-          <Address></Address>
-          <PersonalInfo></PersonalInfo>
-          <EducationalInfo></EducationalInfo>
-          <ProfessionalInfo></ProfessionalInfo>
-          <MarriageRelatedInfo></MarriageRelatedInfo>
-          <ExpectedPartner></ExpectedPartner>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <GeneralInfo register={register}></GeneralInfo>
+          <FamilyInfo register={register}></FamilyInfo>
+          <Address register={register}></Address>
+          <PersonalInfo register={register}></PersonalInfo>
+          <EducationalInfo register={register}></EducationalInfo>
+          <ProfessionalInfo register={register}></ProfessionalInfo>
+          <MarriageRelatedInfo register={register}></MarriageRelatedInfo>
+          <ExpectedPartner register={register}></ExpectedPartner>
           <div className="text-center mt-10">
             <button className="px-5 py-2.5 relative rounded group font-medium text-white font-medium inline-block">
               <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-purple-600 to-blue-500"></span>
