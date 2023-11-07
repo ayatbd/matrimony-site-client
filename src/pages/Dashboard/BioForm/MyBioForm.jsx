@@ -9,10 +9,14 @@ import ExpectedPartner from "./ExpectedPartner";
 import GeneralInfo from "./GeneralInfo";
 import "../../css/page.css";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import { useState } from "react";
 
 const MyBioForm = () => {
+  const [loading, setLoading] = useState(false);
+  // const { user } = useAuth();
   const {
-    register,
+    register,m 
     handleSubmit,
     reset,
     // eslint-disable-next-line no-unused-vars
@@ -22,8 +26,29 @@ const MyBioForm = () => {
   } = useForm();
 
   const onSubmit = (data) => {
+    const email = user?.email;
+    setLoading(true);
     console.log(data);
-    reset(); // Reset the form
+    fetch("http://localhost:5000/biodata", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          setLoading(false);
+          Swal.fire({
+            title: "Success!",
+            text: "The Toy Added Successfully",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+          reset(); // Reset the form
+        }
+      });
   };
   return (
     <div className="w-full">
@@ -44,7 +69,9 @@ const MyBioForm = () => {
               <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-purple-600 to-blue-500"></span>
               <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-purple-600 to-blue-500"></span>
               <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-purple-600 from-blue-500"></span>
-              <span className="relative">Button Text</span>
+              <span className="relative">
+                {loading ? "loading.." : "Button Text"}
+              </span>
             </button>
           </div>
         </form>

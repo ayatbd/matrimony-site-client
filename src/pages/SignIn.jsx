@@ -38,7 +38,7 @@ const SignIn = () => {
         name: loggedInUser.displayName,
         email: loggedInUser.email,
       };
-      fetch("https://summer-camp-server-ten-delta.vercel.app/users", {
+      fetch("http://localhost:5000/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",

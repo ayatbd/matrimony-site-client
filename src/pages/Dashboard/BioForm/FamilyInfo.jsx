@@ -44,7 +44,7 @@ const FamilyInfo = ({ register }) => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <textarea
+          <input
             name="brotherSiter"
             type="text"
             {...register("brotherSiter", { required: true })}
@@ -59,7 +59,7 @@ const FamilyInfo = ({ register }) => {
             </span>
             <span className="text-[22px] text-red-600">*</span>
           </label>
-          <textarea
+          <input
             type="text"
             {...register("eco_socio_status", { required: true })}
             placeholder="Type here"
