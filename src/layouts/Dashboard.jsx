@@ -1,14 +1,17 @@
 import { Link, Outlet } from "react-router-dom";
 import Navigation from "../pages/Navigation";
 import Container from "../pages/Shared/Container";
-import { AiFillHome } from "react-icons/ai";
+import { IoIosCreate } from "react-icons/io";
 import { FaUsers } from "react-icons/fa";
 import { FcDataSheet } from "react-icons/fc";
 import { useState } from "react";
 import { BiUserCircle } from "react-icons/bi";
+import useAuth from "../hooks/useAuth";
+import profile from "../../src/assets/images/profile.png";
 
 const Dashboard = () => {
   const [active, setActive] = useState(null);
+  const { user } = useAuth();
 
   const handleItemClick = (item) => {
     setActive(item);
@@ -35,10 +38,23 @@ const Dashboard = () => {
               aria-label="close sidebar"
               className="drawer-overlay"
             ></label>
+            <div className="pt-3 hidden md:block bg-[#2B383E]">
+              <img
+                className="w-[150px] h-[150px] rounded-full mx-auto"
+                src={user.photoURL ? user.photoURL : profile}
+                alt="Image is not available"
+              />
+              <h1 className="text-lg text-white font-extrabold text-center font-kanit">
+                {user.displayName ? user.displayName : "No Name found"}
+              </h1>
+              <p className="text-xs text-white font-bold font-kanit text-center">
+                {user?.email}
+              </p>
+            </div>
             <ul className="p-4 flex flex-col gap-1 w-72 min-h-full bg-[#2B383E] text-white">
               {/* Sidebar content here */}
 
-              <li>
+              {/* <li>
                 <Link
                   to="/dashboard/home"
                   onClick={() => handleItemClick("dashboard")}
@@ -51,8 +67,22 @@ const Dashboard = () => {
                   <AiFillHome />
                   Dashboard Home
                 </Link>
-              </li>
+              </li> */}
               <hr className="my-5" />
+              <li>
+                <Link
+                  to="/dashboard/createbiodata"
+                  onClick={() => handleItemClick("createbiodata")}
+                  className={
+                    active === "createbiodata"
+                      ? "bg-[#3298EE] hover:bg-[#3298EE]"
+                      : "hover:bg-[#435056]"
+                  }
+                >
+                  <IoIosCreate size={20} />
+                  Create Biodata
+                </Link>
+              </li>
               <li>
                 <Link
                   to="/dashboard/mybiodata"

@@ -13,6 +13,7 @@ import AllUsers from "./../pages/Dashboard/AllUsers";
 import DashboardHome from "../pages/Dashboard/DashboardHome";
 import Biodata from "../pages/Dashboard/Biodata";
 import MyBioForm from "../pages/Dashboard/BioForm/MyBioForm";
+import CreateMyBio from "../pages/Dashboard/CreateMyBio";
 
 export const router = createBrowserRouter([
   {
@@ -70,6 +71,10 @@ export const router = createBrowserRouter([
       {
         path: "mybiodata",
         element: <MyBioForm />,
+      },
+      {
+        path: "createbiodata",
+        element: <CreateMyBio />,
       },
     ],
   },

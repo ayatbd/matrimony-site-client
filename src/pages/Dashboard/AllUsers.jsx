@@ -1,28 +1,28 @@
 import Swal from "sweetalert2";
 import useAxiosSecure from "./../../hooks/useAxiosSecure";
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
 const AllUsers = () => {
   const [axiosSecure] = useAxiosSecure();
-  const [users, setUsers] = useState([]);
+  // const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:5000/users")
-      .then((res) => res.json())
-      .then((data) => {
-        setUsers(data);
-      })
-      .catch((err) => console.log("error", err));
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/users")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setUsers(data);
+  //     })
+  //     .catch((err) => console.log("error", err));
+  // }, []);
 
-  // const { data: users = [], refetch } = useQuery(["users"], async () => {
-  //   const res = await axiosSecure("/users");
-  //   if (!res.ok) {
-  //     throw new Error("Network response was not ok");
-  //   }
-  //   return res.data;
-  // });
-  // console.log(users);
+  const { data: users = [], refetch } = useQuery(["users"], async () => {
+    const res = await axiosSecure("/users");
+    if (!res.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return res.data;
+  });
+  console.log(users);
 
   // make admin
 

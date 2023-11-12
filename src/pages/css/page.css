@@ -50,6 +50,15 @@
     background-repeat: no-repeat;
 }
 
+/* ______create my bio component css________  */
+.tr-border {
+    border-right: 1px solid #cacacb;
+}
+
+.tr-width {
+    width: 50%;
+}
+
 /* ____________common css_____________ */
 .pink {
     color: #E33283;
