@@ -9,6 +9,12 @@
     min-height: 5.5rem;
 }
 
+.dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    transform: translate(0) scale(1);
+    visibility: visible;
+}
+
 .navbar-end,
 .navbar-start {
     width: unset;
@@ -51,11 +57,20 @@
 }
 
 /* ______create my bio component css________  */
+.single_profile_table {
+    border-top: 3px solid #ce0775;
+    margin: 7px 15px;
+    border-radius: 10px;
+    border-bottom: 1px solid #f59fcf;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+}
+
 .tr-border {
     border-right: 1px solid #cacacb;
 }
 
-.tr-width {
+.tr-width td {
     width: 50%;
 }
 

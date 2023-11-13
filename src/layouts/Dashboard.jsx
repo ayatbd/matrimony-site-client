@@ -52,22 +52,6 @@ const Dashboard = () => {
               </p>
             </div>
             <ul className="p-4 flex flex-col gap-1 w-72 min-h-full bg-[#2B383E] text-white">
-              {/* Sidebar content here */}
-
-              {/* <li>
-                <Link
-                  to="/dashboard/home"
-                  onClick={() => handleItemClick("dashboard")}
-                  className={
-                    active === "dashboard"
-                      ? "bg-[#3298EE] hover:bg-[#3298EE]"
-                      : "hover:bg-[#435056]"
-                  }
-                >
-                  <AiFillHome />
-                  Dashboard Home
-                </Link>
-              </li> */}
               <hr className="my-5" />
               <li>
                 <Link

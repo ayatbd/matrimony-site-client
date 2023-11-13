@@ -35,6 +35,21 @@ const Address = ({ register }) => {
             className="input input-bordered w-full"
           />
         </div>
+        <div className="form-control w-full px-5">
+          <label className="label flex justify-start items-center gap-1">
+            <span className="label-text text-[17px] font-[600] text-black">
+              Where did you grown up?
+            </span>
+            <span className="text-[22px] text-red-600">*</span>
+          </label>
+          <input
+            required
+            {...register("grown-up", { required: true })}
+            type="text"
+            placeholder="Type here"
+            className="input input-bordered w-full"
+          />
+        </div>
       </div>
     </div>
   );
