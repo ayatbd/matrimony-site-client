@@ -1,4 +1,5 @@
-const AddressTable = () => {
+const AddressTable = ({ biodata }) => {
+  const { pnt_ads_details, pres_ads_details, grown_up } = biodata;
   return (
     <div className="single_profile_table">
       <table className="min-w-full text-center text-sm font-light">
@@ -16,7 +17,7 @@ const AddressTable = () => {
               Permanent Address
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {pnt_ads_details}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -24,7 +25,7 @@ const AddressTable = () => {
               Present Address
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {pres_ads_details}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -32,7 +33,7 @@ const AddressTable = () => {
               Where did you grown up?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {grown_up}
             </td>
           </tr>
         </tbody>

@@ -1,4 +1,5 @@
-const ProfessionalInfoTable = () => {
+const ProfessionalInfoTable = ({ biodata }) => {
+  const { about_prof, monthly_salary } = biodata;
   return (
     <div className="single_profile_table">
       <table className="min-w-full text-center text-sm font-light">
@@ -16,7 +17,7 @@ const ProfessionalInfoTable = () => {
               Write about your profession
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {about_prof}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -24,7 +25,7 @@ const ProfessionalInfoTable = () => {
               Monthly Salary
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {monthly_salary}
             </td>
           </tr>
         </tbody>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from "../Shared/Container";
 import "../css/page.css";
 import SelectZilla from "./SelectZilla";
@@ -49,7 +50,7 @@ const Finding = () => {
 
                 <div className="w-full">
                   <button className="w-full bottom-shadow text-xl bg-[#E33283] text-white rounded-md py-3 px-6">
-                    Search
+                    <Link to="/allbiodata">Search</Link>
                   </button>
                 </div>
               </div>

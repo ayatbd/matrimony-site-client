@@ -1,4 +1,18 @@
-const GenralInfo = () => {
+const GenralInfo = ({ biodata }) => {
+  const {
+    biodata_type,
+    marital_status,
+    present_ads_div,
+    present_ads_dis,
+    pnt_ads_div,
+    pnt_ads_dis,
+    born_year,
+    height,
+    complexion,
+    blood_group,
+    weight,
+    profession,
+  } = biodata;
   return (
     <div className="single_profile_table">
       <table className=" min-w-full text-center text-sm font-light">
@@ -24,7 +38,7 @@ const GenralInfo = () => {
               Type of Biodata
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {biodata_type}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -32,7 +46,7 @@ const GenralInfo = () => {
               Marital Status
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {marital_status}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -40,7 +54,7 @@ const GenralInfo = () => {
               Present Address (Division)
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {present_ads_div}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -48,7 +62,7 @@ const GenralInfo = () => {
               Present Address (District)
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {present_ads_dis}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -56,7 +70,7 @@ const GenralInfo = () => {
               Permanent Address (Division)
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {pnt_ads_div}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -64,7 +78,7 @@ const GenralInfo = () => {
               Permanent Address (District)
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {pnt_ads_dis}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -72,7 +86,7 @@ const GenralInfo = () => {
               Born Year (Real)
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {born_year}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -80,7 +94,7 @@ const GenralInfo = () => {
               Height
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {height}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -88,7 +102,7 @@ const GenralInfo = () => {
               Complexion
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {complexion}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -96,7 +110,7 @@ const GenralInfo = () => {
               Blood Group
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {blood_group}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -104,7 +118,7 @@ const GenralInfo = () => {
               Weight
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {weight}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -112,7 +126,7 @@ const GenralInfo = () => {
               Profession
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {profession}
             </td>
           </tr>
         </tbody>

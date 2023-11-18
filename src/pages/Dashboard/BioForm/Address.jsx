@@ -44,7 +44,7 @@ const Address = ({ register }) => {
           </label>
           <input
             required
-            {...register("grown-up", { required: true })}
+            {...register("grown_up", { required: true })}
             type="text"
             placeholder="Type here"
             className="input input-bordered w-full"

@@ -1,4 +1,5 @@
-const EduInfoTable = () => {
+const EduInfoTable = ({ biodata }) => {
+  const { academic_medium, acad_quali } = biodata;
   return (
     <div className="single_profile_table">
       <table className="min-w-full text-center text-sm font-light">
@@ -16,7 +17,7 @@ const EduInfoTable = () => {
               Academic Medium
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {academic_medium}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -24,7 +25,7 @@ const EduInfoTable = () => {
               Write about your max academic Qualification
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {acad_quali}
             </td>
           </tr>
         </tbody>

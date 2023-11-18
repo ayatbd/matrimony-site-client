@@ -1,5 +1,6 @@
 import "../../css/page.css";
-const FamilyInfoTable = () => {
+const FamilyInfoTable = ({ biodata }) => {
+  const { fatherName, motherName, brotherSiter, eco_socio_status } = biodata;
   return (
     <div className="single_profile_table">
       <table className="min-w-full text-center text-sm font-light">
@@ -17,7 +18,7 @@ const FamilyInfoTable = () => {
               Father's Profession
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {fatherName}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -25,7 +26,7 @@ const FamilyInfoTable = () => {
               Mother's Profession
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {motherName}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -33,7 +34,7 @@ const FamilyInfoTable = () => {
               How Many brothers and sister do you have? Write about them.
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {brotherSiter}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -41,7 +42,7 @@ const FamilyInfoTable = () => {
               Family economic and social status
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {eco_socio_status}
             </td>
           </tr>
         </tbody>

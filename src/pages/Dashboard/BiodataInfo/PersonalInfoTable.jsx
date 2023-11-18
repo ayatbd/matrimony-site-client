@@ -1,4 +1,15 @@
-const PersonalInfoTable = () => {
+const PersonalInfoTable = ({ biodata }) => {
+  const {
+    quran_rec_quest,
+    salah_accom,
+    salah_accom_year,
+    majhab_follow,
+    fav_scholar,
+    disease_info,
+    watch_hear,
+    bed_side,
+    about_self,
+  } = biodata;
   return (
     <div className="single_profile_table">
       <table className="min-w-full text-center text-sm font-light">
@@ -16,7 +27,7 @@ const PersonalInfoTable = () => {
               Can you recite the Quran correctly?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {quran_rec_quest}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -24,7 +35,7 @@ const PersonalInfoTable = () => {
               Do you accomplish salah daily five times?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {salah_accom}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -32,7 +43,7 @@ const PersonalInfoTable = () => {
               How many years you accomplish salah daily?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {salah_accom_year}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -40,7 +51,7 @@ const PersonalInfoTable = () => {
               Which Majhab do you follow?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {majhab_follow}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -48,7 +59,7 @@ const PersonalInfoTable = () => {
               Write at least names of your three favourite Islamic Scholars.
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {fav_scholar}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -56,7 +67,7 @@ const PersonalInfoTable = () => {
               Do you have any physical or mental disease?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {disease_info}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -64,7 +75,7 @@ const PersonalInfoTable = () => {
               Do you watch or hear song/serial/drama/cinema?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {watch_hear}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -72,7 +83,7 @@ const PersonalInfoTable = () => {
               Do you have any bed side that you want to mention?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {bed_side}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -80,7 +91,7 @@ const PersonalInfoTable = () => {
               Write something about yourself.
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {about_self}
             </td>
           </tr>
         </tbody>

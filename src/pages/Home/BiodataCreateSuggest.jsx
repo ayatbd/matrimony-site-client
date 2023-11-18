@@ -4,8 +4,23 @@ import { FaYoutube } from "react-icons/fa";
 import flower from "../../assets/images/flower.png";
 import { Link } from "react-router-dom";
 import Dialog from "./Dialog";
+import useAuth from "../../hooks/useAuth";
+import useBiodata from "../../hooks/useBiodata";
+import { useEffect, useState } from "react";
 
 const BiodataCreateSuggest = () => {
+  const { user } = useAuth();
+  const [biodatas, , isLoading] = useBiodata();
+  const [submitted, setSubmitted] = useState(false);
+  useEffect(() => {
+    if (user && !isLoading) {
+      const isUserSubmitted = biodatas.some(
+        (data) => data.userEmail === user.email
+      );
+      setSubmitted(isUserSubmitted);
+    }
+  }, [biodatas, isLoading, user]);
+
   return (
     <div className="createBio-bg h-[100vh]">
       <Container>
@@ -20,12 +35,21 @@ const BiodataCreateSuggest = () => {
             <button
               onClick={() => document.getElementById("my_modal_2").showModal()}
             >
-              <Link to="/mybioform">
-                <span className="border bottom-shadow rounded-xl px-5 py-7 flex gap-4 flex-col items-center justify-center">
-                  <FcEditImage size="45" />
-                  <p className="pink font-bold">+ Create Your Biodata</p>
-                </span>
-              </Link>
+              {!submitted ? (
+                <Link to="/mybioform">
+                  <span className="border bottom-shadow rounded-xl px-5 py-7 flex gap-4 flex-col items-center justify-center">
+                    <FcEditImage size="45" />
+                    <p className="pink font-bold">+ Create Your Biodata</p>
+                  </span>
+                </Link>
+              ) : (
+                <Link to="/biodatainfo">
+                  <span className="border bottom-shadow rounded-xl px-5 py-7 flex gap-4 flex-col items-center justify-center">
+                    <FcEditImage size="45" />
+                    <p className="pink font-bold">+ See Your Biodata</p>
+                  </span>
+                </Link>
+              )}
             </button>
             <Dialog my_modal_2="my_modal_2"></Dialog>
             <button>

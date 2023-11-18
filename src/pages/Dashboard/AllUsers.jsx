@@ -7,7 +7,6 @@ import useMale from "../../hooks/useMale";
 
 const AllUsers = () => {
   const [axiosSecure] = useAxiosSecure();
-  const isMale = useMale();
   const {
     isPending,
     error,

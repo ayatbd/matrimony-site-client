@@ -1,4 +1,15 @@
-const ExpectedPartnerTable = () => {
+const ExpectedPartnerTable = ({ biodata }) => {
+  const {
+    age,
+    expected_height,
+    expected_comp,
+    part_district,
+    part_marital_stat,
+    part_edu_quali,
+    part_occu,
+    part_eco_status,
+    part_specialty,
+  } = biodata;
   return (
     <div className="single_profile_table">
       <table className="min-w-full text-center text-sm font-light">
@@ -16,7 +27,7 @@ const ExpectedPartnerTable = () => {
               Age
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {age}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -24,7 +35,7 @@ const ExpectedPartnerTable = () => {
               Height
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {expected_height}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -32,7 +43,7 @@ const ExpectedPartnerTable = () => {
               complexion
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {expected_comp}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -40,7 +51,7 @@ const ExpectedPartnerTable = () => {
               Permanent Address (District)
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {part_district}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -48,7 +59,7 @@ const ExpectedPartnerTable = () => {
               Marital Status
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {part_marital_stat}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -56,7 +67,7 @@ const ExpectedPartnerTable = () => {
               Educational Qualification
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {part_edu_quali}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -64,7 +75,7 @@ const ExpectedPartnerTable = () => {
               Occupation
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {part_occu}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -72,7 +83,7 @@ const ExpectedPartnerTable = () => {
               Economical Status
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {part_eco_status}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -80,7 +91,7 @@ const ExpectedPartnerTable = () => {
               Specialties and Qualities that you expect from partner?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {part_specialty}
             </td>
           </tr>
         </tbody>

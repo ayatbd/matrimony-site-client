@@ -1,4 +1,5 @@
-const MarriageRelatedInfoTable = () => {
+const MarriageRelatedInfoTable = ({ biodata }) => {
+  const { guardian_agree, marriage_thinking, f_plan_thinking } = biodata;
   return (
     <div className="single_profile_table">
       <table className="min-w-full text-center text-sm font-light">
@@ -16,7 +17,7 @@ const MarriageRelatedInfoTable = () => {
               Are your guardian agreed to your marriage?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {guardian_agree}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -24,7 +25,7 @@ const MarriageRelatedInfoTable = () => {
               What is your thinking and why do you want to marry?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {marriage_thinking}
             </td>
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
@@ -32,7 +33,7 @@ const MarriageRelatedInfoTable = () => {
               What is your thinking about family planning?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
-              Thornton
+              {f_plan_thinking}
             </td>
           </tr>
         </tbody>

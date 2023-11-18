@@ -35,6 +35,31 @@ const AllBiodataTable = () => {
     });
   };
 
+  const handleApprove = (biodata) => {
+    console.log(biodata);
+    if (biodata.status === "approved") {
+      // If already approved, do nothing
+      return;
+    }
+    fetch(`http://localhost:5000/biodata/approve/${biodata._id}`, {
+      method: "PATCH",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount) {
+          refetch();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "The user is Instructor Now!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      });
+  };
+
   if (isLoading) {
     return <Loader></Loader>;
   }
@@ -52,6 +77,7 @@ const AllBiodataTable = () => {
                   <th className="text-left p-3 px-5">Name</th>
                   <th className="text-left p-3 px-5">Email</th>
                   <th className="text-left p-3 px-5">Type Of Biodata</th>
+                  <th className="text-center p-3 px-5">Type Of Biodata</th>
                 </tr>
                 {biodatas.map((biodata) => (
                   <tr
@@ -61,12 +87,18 @@ const AllBiodataTable = () => {
                     <td className="p-3 px-5">{biodata.name}</td>
                     <td className="p-3 px-5">{biodata.userEmail}</td>
                     <td className="p-3 px-5">{biodata.biodata_type}</td>
-                    <td className="p-3 px-5 flex justify-end">
+                    <td className="p-3 px-5 flex justify-center">
                       <button
+                        disabled={biodata.status === "approved"}
+                        onClick={() => handleApprove(biodata)}
                         type="button"
-                        className="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                        className={
+                          biodata.status === "approved"
+                            ? "mr-3 text-sm bg-white hover:bg-white text-gray-500 py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                            : "mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                        }
                       >
-                        Approve
+                        {biodata.status === "approved" ? "Approved" : "Approve"}
                       </button>
                       <button
                         type="button"
