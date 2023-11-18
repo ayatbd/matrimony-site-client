@@ -4,33 +4,27 @@ import BiodataInfoCard from "./BiodataInfoCard";
 import ScrollToTop from "react-scroll-to-top";
 import Container from "../../Shared/Container";
 import Loader from "../../Shared/Loader";
+import useAdmin from "../../../hooks/useAdmin";
+import useBiodata from "../../../hooks/useBiodata";
 
 const BiodataInfo = () => {
-  const [biodatas, setBiodatas] = useState([]);
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    fetch("http://localhost:5000/biodata")
-      .then((res) => res.json())
-      .then((data) => {
-        setBiodatas(data);
-        setLoading(false);
-      });
-  }, []);
+  const [isAdmin] = useAdmin();
+  console.log(isAdmin);
+  const [biodatas, refetch, isLoading] = useBiodata();
 
-  if (loading) {
-    return <Loader></Loader>;
-  }
+  if (isLoading) return <Loader></Loader>;
   return (
-    <div className="w-full">
+    <div className="w-full py-14">
+      <ScrollToTop top="800" color="#fff" smooth />
       <Container>
-        <ScrollToTop top="800" color="#fff" smooth />
-        {biodatas.map((biodata) => (
-          <BiodataInfoCard
-            key={biodata._id}
-            biodata={biodata}
-          ></BiodataInfoCard>
-        ))}
+        <div>
+          {biodatas.map((biodata) => (
+            <BiodataInfoCard
+              key={biodata._id}
+              biodata={biodata}
+            ></BiodataInfoCard>
+          ))}
+        </div>
       </Container>
     </div>
   );

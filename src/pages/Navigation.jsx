@@ -5,10 +5,23 @@ import "../pages/css/page.css";
 import Container from "./Shared/Container";
 import useAuth from "../hooks/useAuth";
 import Swal from "sweetalert2";
-// import { useState } from "react";
+import useAdmin from "./../hooks/useAdmin";
+import useBiodata from "../hooks/useBiodata";
+import { useEffect, useState } from "react";
 const Navigation = () => {
-  // const [isOpen, setIsOpen] = useState(false);
   const { user, logOut } = useAuth();
+  const [isAdmin] = useAdmin();
+  const [biodatas, , isLoading] = useBiodata();
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (user && !isLoading) {
+      const isUserSubmitted = biodatas.some(
+        (data) => data.userEmail === user.email
+      );
+      setSubmitted(isUserSubmitted);
+    }
+  }, [biodatas, isLoading, user]);
 
   const handleLogOut = () => {
     logOut()
@@ -91,12 +104,9 @@ const Navigation = () => {
                   />
                 </div> */}
                 <label tabIndex={0} className="btn m-1 btn-circle">
-                  <img
-                    className="rounded-full border-2"
-                    src={user.photoURL ? user.photoURL : profile}
-                  />
+                  <img className="rounded-full" src={profile} />
                 </label>
-                <div className="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
+                <div className="opacity-0 z-50 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
                   <div
                     className="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
                     aria-labelledby="headlessui-menu-button-1"
@@ -110,36 +120,45 @@ const Navigation = () => {
                       </p>
                     </div>
                     <div className="py-1">
+                      {isAdmin && (
+                        <Link
+                          to="/biodatatable"
+                          className="text-gray-700 hover:bg-gray-100 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                        >
+                          All Biodata Table
+                        </Link>
+                      )}
+                      {isAdmin && (
+                        <Link
+                          to="/allusers"
+                          className="text-gray-700 hover:bg-gray-100 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                        >
+                          All user
+                        </Link>
+                      )}
+
+                      {!submitted ? (
+                        <Link
+                          to="/mybioform"
+                          className="text-gray-700 hover:bg-gray-100 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                        >
+                          Create Biodata
+                        </Link>
+                      ) : (
+                        <Link
+                          to="/biodatainfo"
+                          className="text-gray-700 hover:bg-gray-100 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                        >
+                          My Biodata
+                        </Link>
+                      )}
                       <Link
-                        to="/biodatainfo"
-                        tabIndex="0"
-                        className="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
-                        role="menuitem"
-                      >
-                        My Biodata
-                      </Link>
-                      <Link
-                        to="/mybioform"
-                        tabIndex="0"
-                        className="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
-                        role="menuitem"
-                      >
-                        Create Biodata
-                      </Link>
-                      <Link
-                        href="javascript:void(0)"
-                        tabIndex="1"
-                        className="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                        className="text-gray-700 hover:bg-gray-100 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
                         role="menuitem"
                       >
                         Copy Biodata Link
                       </Link>
-                      <Link
-                        href="javascript:void(0)"
-                        tabIndex="1"
-                        className="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
-                        role="menuitem"
-                      >
+                      <Link className="text-gray-700 hover:bg-gray-100 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left">
                         Delete or Hide Biodata
                       </Link>
                     </div>
@@ -148,7 +167,7 @@ const Navigation = () => {
                         onClick={handleLogOut}
                         href="javascript:void(0)"
                         tabIndex="3"
-                        className="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                        className="text-gray-700 hover:bg-gray-100 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
                         role="menuitem"
                       >
                         Sign out
@@ -156,32 +175,6 @@ const Navigation = () => {
                     </div>
                   </div>
                 </div>
-                {/* {isOpen && (
-                  <div
-                    className="w-[250px] hidden md:block z-10 h-fit absolute rounded-md shadow-md hover:shadow-2xl bg-slate-500 py-8 px-5
-                      -top-0 right-0 md:left-auto md:top-12"
-                  >
-                    <div className="w-[120px] h-[120px] mx-auto rounded-full border-2 border-primary overflow-hidden">
-                      <img
-                        src={user.photoURL ? user.photoURL : profile}
-                        className="w-[120px] h-[120px] mx-auto rounded-full"
-                        alt="profile"
-                      />
-                    </div>
-                    <div className="flex flex-col justify-center items-center  mt-5 text-gray-900">
-                      <h1 className="text-base font-bold">
-                        Name: {user?.displayName}
-                      </h1>
-                      <p className="text-xs my-3">Email: {user?.email}</p>
-                      <button
-                        className="text-white flex justify-center items-center gap-3 font-medium py-2 px-6 rounded-full bg-indigo-600 hover:bg-indigo-700"
-                        onClick={handleLogOut}
-                      >
-                        Logout
-                      </button>
-                    </div>
-                  </div>
-                )} */}
               </div>
             </div>
           ) : (

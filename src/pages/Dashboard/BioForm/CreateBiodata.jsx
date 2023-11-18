@@ -10,14 +10,13 @@ import GeneralInfo from "./GeneralInfo";
 import "../../css/page.css";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useAuth from "../../../hooks/useAuth";
 import Container from "../../Shared/Container";
+import useBiodata from "../../../hooks/useBiodata";
 
-const MyBioForm = () => {
+const CreateBiodata = () => {
   const [loading, setLoading] = useState(false);
-  const [biodataSubmitted, setBiodataSubmitted] = useState(false); // Added state to track submission status
-  const [biodatas, setBiodatas] = useState([]);
   const { user } = useAuth();
 
   const {
@@ -30,60 +29,51 @@ const MyBioForm = () => {
     formState: { errors },
   } = useForm();
 
-  useEffect(() => {
-    fetch("http://localhost:5000/biodata")
-      .then((res) => res.json())
-      .then((data) => {
-        setBiodatas(data);
-        // Check if the user has already submitted biodata based on the response data
-        const userHasSubmitted = data.some(
-          (entry) => entry.email === user.email
-        ); // Replace 1 with the actual user ID
-        setBiodataSubmitted(userHasSubmitted);
-      });
-  }, []);
+  const [biodatas, refetch, isLoading] = useBiodata();
+
+  // const { data: biodatas = [], refetch } = useQuery({
+  //   queryKey: ["biodata"],
+  //   queryFn: async () => {
+  //     const res = await axiosSecure("/biodata");
+  //     return res.data;
+  //   },
+  // });
+
+  const isUserSubmitted = biodatas.some(
+    (data) => data.userEmail === user.email
+  );
 
   const onSubmit = (data) => {
-    if (biodataSubmitted) {
-      // If the user has already submitted, display a message or prevent submission
-      Swal.fire({
-        title: "Already Submitted",
-        text: "You've already submitted your biodata.",
-        icon: "info",
-        confirmButtonText: "Ok",
+    setLoading(true);
+    console.log(data);
+    const updatedData = { userEmail: user.email, ...data };
+    fetch("http://localhost:5000/biodata", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          refetch();
+          setLoading(false);
+          Swal.fire({
+            title: "Success!",
+            text: "Your biodata has been submitted successfully.",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+          reset(); // Reset the form
+        }
       });
-    } else {
-      setLoading(true);
-      console.log(data);
-      const updatedData = { userEmail: user.email, ...data };
-      fetch("http://localhost:5000/biodata", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(updatedData),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.insertedId) {
-            setLoading(false);
-            setBiodataSubmitted(true); // Update the submission status
-            Swal.fire({
-              title: "Success!",
-              text: "Your biodata has been submitted successfully.",
-              icon: "success",
-              confirmButtonText: "Ok",
-            });
-            reset(); // Reset the form
-          }
-        });
-    }
   };
 
   return (
-    <div className="w-full">
-      <Container>
-        <div className="w-full">
+    <Container>
+      <div className="w-full py-8">
+        <div className="w-2/3">
           <ScrollToTop top="600" color="#fff" smooth />
           <form onSubmit={handleSubmit(onSubmit)}>
             <GeneralInfo register={register}></GeneralInfo>
@@ -96,8 +86,8 @@ const MyBioForm = () => {
             <ExpectedPartner register={register}></ExpectedPartner>
             <div className="text-center mt-10">
               <button
+                disabled={isUserSubmitted}
                 className="px-5 py-2.5 relative rounded group text-white font-medium inline-block"
-                disabled={biodataSubmitted}
               >
                 <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-purple-600 to-blue-500"></span>
                 <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-purple-600 to-blue-500"></span>
@@ -107,12 +97,17 @@ const MyBioForm = () => {
                   {loading ? "loading.." : "Button Text"}
                 </span>
               </button>
+              {isUserSubmitted && (
+                <p className="text-red-500 mt-2">
+                  You've already submitted the form.
+                </p>
+              )}
             </div>
           </form>
         </div>
-      </Container>
-    </div>
+      </div>
+    </Container>
   );
 };
 
-export default MyBioForm;
+export default CreateBiodata;

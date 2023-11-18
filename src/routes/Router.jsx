@@ -8,12 +8,11 @@ import AboutUs from "../pages/AboutUs";
 import Faq from "../pages/Faq";
 import Guide from "../pages/Guide";
 import ErrorPage from "../components/ErrorPage";
-import Dashboard from "../layouts/Dashboard";
 import AllUsers from "./../pages/Dashboard/AllUsers";
-import DashboardHome from "../pages/Dashboard/DashboardHome";
-import Biodata from "../pages/Dashboard/Biodata";
-import MyBioForm from "../pages/Dashboard/BioForm/MyBioForm";
+import AllBiodataTable from "../pages/Dashboard/AllBiodataTable";
 import BiodataInfo from "../pages/Dashboard/BiodataInfo/BiodataInfo";
+import AllBiodata from "../pages/AllBiodata";
+import CreateBiodata from "../pages/Dashboard/BioForm/CreateBiodata";
 
 export const router = createBrowserRouter([
   {
@@ -55,7 +54,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "mybioform",
-        element: <MyBioForm />,
+        element: <CreateBiodata />,
+      },
+      {
+        path: "allusers",
+        element: <AllUsers />,
+      },
+      {
+        path: "biodatatable",
+        element: <AllBiodataTable />,
+      },
+      {
+        path: "allbiodata",
+        element: <AllBiodata />,
       },
     ],
   },
@@ -72,13 +83,13 @@ export const router = createBrowserRouter([
   //       path: "alluser",
   //       element: <AllUsers />,
   //     },
-  //     {
-  //       path: "biodata",
-  //       element: <Biodata />,
-  //     },
+  // {
+  //   path: "biodata",
+  //   element: <Biodata />,
+  // },
   //     {
   //       path: "mybiodata",
-  //       element: <MyBioForm />,
+  //       element: <CreateBiodata />,
   //     },
   //     {
   //       path: "createbiodata",

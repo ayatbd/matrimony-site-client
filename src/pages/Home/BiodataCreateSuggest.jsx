@@ -5,7 +5,7 @@ import flower from "../../assets/images/flower.png";
 import { Link } from "react-router-dom";
 import Dialog from "./Dialog";
 
-const CreateBio = () => {
+const BiodataCreateSuggest = () => {
   return (
     <div className="createBio-bg h-[100vh]">
       <Container>
@@ -20,7 +20,7 @@ const CreateBio = () => {
             <button
               onClick={() => document.getElementById("my_modal_2").showModal()}
             >
-              <Link to="/dashboard/mybiodata">
+              <Link to="/mybioform">
                 <span className="border bottom-shadow rounded-xl px-5 py-7 flex gap-4 flex-col items-center justify-center">
                   <FcEditImage size="45" />
                   <p className="pink font-bold">+ Create Your Biodata</p>
@@ -43,4 +43,4 @@ const CreateBio = () => {
   );
 };
 
-export default CreateBio;
+export default BiodataCreateSuggest;

@@ -1,15 +1,15 @@
 import HeroSection from "./HeroSection";
-import CreateBio from "./CreateBio";
 import Finding from "./Finding";
 import QuickAccess from "./QuickAccess";
 import Statistics from "./Statistics";
+import BiodataCreateSuggest from "./BiodataCreateSuggest";
 
 const Home = () => {
   return (
     <div>
       <HeroSection />
       <Finding />
-      <CreateBio />
+      <BiodataCreateSuggest />
       <QuickAccess />
       <Statistics />
     </div>

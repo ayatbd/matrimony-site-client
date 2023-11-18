@@ -29,7 +29,7 @@ const GeneralInfo = ({ register }) => {
         <div className="form-control w-full px-5">
           <label className="label flex justify-start items-center gap-1">
             <span className="label-text text-[17px] font-[600] text-black">
-              Type of Biodata
+              Gender
             </span>
             <span className="text-[22px] text-red-600">**</span>
           </label>
@@ -38,8 +38,8 @@ const GeneralInfo = ({ register }) => {
             required
             className="input input-bordered w-full"
           >
-            <option>Male's Biodata</option>
-            <option>Female's Biodata</option>
+            <option>Male</option>
+            <option>Female</option>
           </select>
         </div>
         <div className="form-control w-full px-5">
@@ -136,7 +136,7 @@ const GeneralInfo = ({ register }) => {
             <span className="text-[22px] text-red-600">*</span>
           </label>
           <select
-            {...register("born_year)", { required: true })}
+            {...register("born_year", { required: true })}
             className="input input-bordered w-full"
           >
             <Year />
@@ -150,7 +150,7 @@ const GeneralInfo = ({ register }) => {
             <span className="text-[22px] text-red-600">*</span>
           </label>
           <select
-            {...register("height)", { required: true })}
+            {...register("height", { required: true })}
             className="input input-bordered w-full"
           >
             <Feet />
@@ -164,7 +164,7 @@ const GeneralInfo = ({ register }) => {
             <span className="text-[22px] text-red-600">*</span>
           </label>
           <select
-            {...register("complexion)", { required: true })}
+            {...register("complexion", { required: true })}
             className="input input-bordered w-full"
           >
             <option>Very Fair</option>
@@ -182,7 +182,7 @@ const GeneralInfo = ({ register }) => {
             <span className="text-[22px] text-red-600">*</span>
           </label>
           <select
-            {...register("blood_group)", { required: true })}
+            {...register("blood_group", { required: true })}
             className="input input-bordered w-full"
           >
             <option>Unknown</option>
@@ -203,7 +203,7 @@ const GeneralInfo = ({ register }) => {
             <span className="text-[22px] text-red-600">*</span>
           </label>
           <select
-            {...register("weight)", { required: true })}
+            {...register("weight", { required: true })}
             className="input input-bordered w-full"
           >
             <Weight />
@@ -218,7 +218,7 @@ const GeneralInfo = ({ register }) => {
           </label>
           <input
             type="text"
-            {...register("profession)", { required: true })}
+            {...register("profession", { required: true })}
             placeholder="Type here"
             className="input input-bordered w-full"
           />
