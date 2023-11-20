@@ -1,37 +1,19 @@
-import { useEffect, useState } from "react";
-import "../../css/page.css";
-import AddressTable from "./AddressTable";
-import EduInfoTable from "./EduInfoTable";
-import ExpectedPartnerTable from "./ExpectedPartnerTable";
-import FamilyInfoTable from "./FamilyInfoTable";
-import GenralInfoTable from "./GenralInfoTable";
-import MarriageRelatedInfoTable from "./MarriageRelatedInfoTable";
-import PersonalInfoTable from "./PersonalInfoTable";
-import ProfessionalInfoTable from "./ProfessionalInfoTable";
-import man_avatar from "../../../assets/images/male.jpg";
+import { useLoaderData } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
-import Container from "../../Shared/Container";
-import Loader from "../../Shared/Loader";
-import useBiodata from "../../../hooks/useBiodata";
-import useAuth from "../../../hooks/useAuth";
+import Container from "./Shared/Container";
+import GenralInfoTable from "./Dashboard/BiodataInfo/GenralInfoTable";
+import FamilyInfoTable from "./Dashboard/BiodataInfo/FamilyInfoTable";
+import AddressTable from "./Dashboard/BiodataInfo/AddressTable";
+import PersonalInfoTable from "./Dashboard/BiodataInfo/PersonalInfoTable";
+import EduInfoTable from "./Dashboard/BiodataInfo/EduInfoTable";
+import ProfessionalInfoTable from "./Dashboard/BiodataInfo/ProfessionalInfoTable";
+import MarriageRelatedInfoTable from "./Dashboard/BiodataInfo/MarriageRelatedInfoTable";
+import ExpectedPartnerTable from "./Dashboard/BiodataInfo/ExpectedPartnerTable";
+import man_avatar from "../assets/images/male-avatar.png";
+import female_avatar from "../assets/images/Female-avater.png";
 
-const BiodataInfo = () => {
-  // const [isAdmin] = useAdmin();
-  const { user } = useAuth();
-  const [myBiodata, setMyBiodata] = useState("");
-  console.log(myBiodata);
-  const [biodatas, refetch, isLoading] = useBiodata();
-
-  useEffect(() => {
-    if (user && !isLoading) {
-      const findedBiodata = biodatas.find(
-        (data) => data.userEmail === user.email
-      );
-      setMyBiodata(findedBiodata);
-    }
-  }, [biodatas, isLoading, user]);
-
-  if (isLoading) return <Loader></Loader>;
+const SingleBiodata = () => {
+  const biodata = useLoaderData();
   return (
     <div className="w-full py-14">
       <ScrollToTop top="800" color="#fff" smooth />
@@ -42,7 +24,9 @@ const BiodataInfo = () => {
               <div className="flex flex-col items-center">
                 <img
                   className="w-24 h-24 rounded-full border p-1"
-                  src={man_avatar}
+                  src={
+                    biodata.biodata_type === "Male" ? man_avatar : female_avatar
+                  }
                   alt=""
                 />
                 <p className="text-[28px] font-semibold">Biodata No.</p>
@@ -63,7 +47,7 @@ const BiodataInfo = () => {
                         Academic Medium
                       </td>
                       <td className="font-[400] text-start px-6 py-2">
-                        {myBiodata.academic_medium}
+                        {biodata.academic_medium}
                       </td>
                     </tr>
                     <tr className="border dark:border-neutral-500 tr-width">
@@ -95,7 +79,7 @@ const BiodataInfo = () => {
                         Academic Medium
                       </td>
                       <td className="font-[400] text-start px-6 py-2">
-                        {myBiodata.academic_medium}
+                        {biodata.academic_medium}
                       </td>
                     </tr>
                   </tbody>
@@ -105,14 +89,14 @@ const BiodataInfo = () => {
             <div className="overflow-x-auto w-8/12">
               <div className="inline-block min-w-full">
                 <div className="overflow-hidden space-y-8">
-                  <GenralInfoTable biodata={myBiodata} />
-                  <FamilyInfoTable biodata={myBiodata} />
-                  <AddressTable biodata={myBiodata} />
-                  <PersonalInfoTable biodata={myBiodata} />
-                  <EduInfoTable biodata={myBiodata} />
-                  <ProfessionalInfoTable biodata={myBiodata} />
-                  <MarriageRelatedInfoTable biodata={myBiodata} />
-                  <ExpectedPartnerTable biodata={myBiodata} />
+                  <GenralInfoTable biodata={biodata} />
+                  <FamilyInfoTable biodata={biodata} />
+                  <AddressTable biodata={biodata} />
+                  <PersonalInfoTable biodata={biodata} />
+                  <EduInfoTable biodata={biodata} />
+                  <ProfessionalInfoTable biodata={biodata} />
+                  <MarriageRelatedInfoTable biodata={biodata} />
+                  <ExpectedPartnerTable biodata={biodata} />
                 </div>
               </div>
             </div>
@@ -123,4 +107,4 @@ const BiodataInfo = () => {
   );
 };
 
-export default BiodataInfo;
+export default SingleBiodata;

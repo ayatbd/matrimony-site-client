@@ -1,6 +1,11 @@
-const SelectZilla = () => {
+const SelectZilla = ({ selectedAddress, setSelectedAddress }) => {
   return (
-    <>
+    <select
+      value={selectedAddress}
+      onChange={(e) => setSelectedAddress(e.target.value)}
+      className="w-full px-4 py-3 rounded-md border"
+    >
+      <option value="All">All</option>
       <option value="Bagerhat">Bagerhat</option>
       <option value="Bandarban">Bandarban</option>
       <option value="Barguna">Barguna</option>
@@ -66,7 +71,7 @@ const SelectZilla = () => {
       <option value="Sylhet">Sylhet</option>
       <option value="Tangail">Tangail</option>
       <option value="Thakurgaon">Thakurgaon</option>
-    </>
+    </select>
   );
 };
 

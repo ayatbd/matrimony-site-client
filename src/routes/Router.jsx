@@ -13,6 +13,7 @@ import AllBiodataTable from "../pages/Dashboard/AllBiodataTable";
 import BiodataInfo from "../pages/Dashboard/BiodataInfo/BiodataInfo";
 import AllBiodata from "../pages/AllBiodata";
 import CreateBiodata from "../pages/Dashboard/BioForm/CreateBiodata";
+import SingleBiodata from "../pages/SingleBiodata";
 
 export const router = createBrowserRouter([
   {
@@ -68,33 +69,12 @@ export const router = createBrowserRouter([
         path: "allbiodata",
         element: <AllBiodata />,
       },
+      {
+        path: "/viewbiodata/:id",
+        element: <SingleBiodata />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/biodata/${params.id}`),
+      },
     ],
   },
-  // {
-  //   path: "dashboard",
-  //   element: <Dashboard></Dashboard>,
-  //   errorElement: <ErrorPage></ErrorPage>,
-  //   children: [
-  //     {
-  //       path: "home",
-  //       element: <DashboardHome />,
-  //     },
-  //     {
-  //       path: "alluser",
-  //       element: <AllUsers />,
-  //     },
-  // {
-  //   path: "biodata",
-  //   element: <Biodata />,
-  // },
-  //     {
-  //       path: "mybiodata",
-  //       element: <CreateBiodata />,
-  //     },
-  //     {
-  //       path: "createbiodata",
-  //       element: <BiodataInfo />,
-  //     },
-  //   ],
-  // },
 ]);

@@ -152,10 +152,7 @@ const Navigation = () => {
                           My Biodata
                         </Link>
                       )}
-                      <Link
-                        className="text-gray-700 hover:bg-gray-100 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
-                        role="menuitem"
-                      >
+                      <Link className="text-gray-700 hover:bg-gray-100 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left">
                         Copy Biodata Link
                       </Link>
                       <Link className="text-gray-700 hover:bg-gray-100 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left">
@@ -165,10 +162,7 @@ const Navigation = () => {
                     <div className="py-1">
                       <Link
                         onClick={handleLogOut}
-                        href="javascript:void(0)"
-                        tabIndex="3"
                         className="text-gray-700 hover:bg-gray-100 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
-                        role="menuitem"
                       >
                         Sign out
                       </Link>
