@@ -28,7 +28,7 @@ const Statistics = () => {
                 />
               </div>
             </div>
-            <div className="md:w-1/2 space-y-5">
+            <div className="md:w-1/2">
               <div>
                 <h2 className="text-3xl text-center md:text-start text-[#530E29] font-bold">
                   Welcome to

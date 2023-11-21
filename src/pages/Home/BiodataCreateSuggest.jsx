@@ -32,10 +32,7 @@ const BiodataCreateSuggest = () => {
           </h1>
           <img className="w-28 h-28" src={flower} alt="" />
           <div className="w-full flex flex-col md:flex-row items-center justify-center gap-5 md:gap-10">
-            <button
-              className="w-full"
-              onClick={() => document.getElementById("my_modal_2").showModal()}
-            >
+            <button className="w-full md:w-1/4">
               {!submitted ? (
                 <Link to="/mybioform">
                   <span className="border bottom-shadow rounded-xl px-5 py-7 flex gap-4 flex-col items-center justify-center">
@@ -53,7 +50,7 @@ const BiodataCreateSuggest = () => {
               )}
             </button>
             <Dialog my_modal_2="my_modal_2"></Dialog>
-            <button className="w-full">
+            <button className="w-full md:w-1/4">
               <Link>
                 <span className="border bottom-shadow rounded-xl px-5 py-7 flex gap-4 flex-col items-center justify-center">
                   <FaYoutube color="red" size="45" />

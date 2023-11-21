@@ -68,7 +68,7 @@ const AllBiodataTable = () => {
       <Container>
         <div className="text-gray-900 bg-gray-200">
           <div className="p-4 flex">
-            <h1 className="text-3xl">Biodata</h1>
+            <h1 className="text-2xl md:text-3xl">Biodata</h1>
           </div>
           <div className="px-3 py-4 flex justify-center">
             <table className="w-full text-md bg-white shadow-md rounded mb-4">

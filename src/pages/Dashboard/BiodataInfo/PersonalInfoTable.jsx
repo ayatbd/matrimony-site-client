@@ -72,7 +72,7 @@ const PersonalInfoTable = ({ biodata }) => {
           </tr>
           <tr className="border-b dark:border-neutral-500 tr-width">
             <td className="text-start font-bold text-[#72808e] text-[18px] px-6 py-4 tr-border ">
-              Do you watch or hear song/serial/drama/cinema?
+              Do you watch or hear song, serial, drama, cinema?
             </td>
             <td className="font-[400] text-[#72808e] text-[17px] text-start px-6 py-4">
               {watch_hear}

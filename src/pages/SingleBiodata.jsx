@@ -19,8 +19,8 @@ const SingleBiodata = () => {
       <ScrollToTop top="800" color="#fff" smooth />
       <Container>
         <div>
-          <div className="flex items-start justify-between gap-10">
-            <div className="w-4/12 space-y-8 py-12 text-white bg-[#660066] rounded-md">
+          <div className="flex md:flex-row flex-col items-start justify-between gap-6">
+            <div className="md:w-4/12 w-full space-y-8 py-12 text-white bg-[#660066] rounded-md">
               <div className="flex flex-col items-center">
                 <img
                   className="w-24 h-24 rounded-full border p-1"
@@ -94,7 +94,7 @@ const SingleBiodata = () => {
                 </table>
               </div>
             </div>
-            <div className="overflow-x-auto w-8/12">
+            <div className="overflow-x-auto md:w-8/12">
               <div className="inline-block min-w-full">
                 <div className="overflow-hidden space-y-8">
                   <GenralInfoTable biodata={biodata} />

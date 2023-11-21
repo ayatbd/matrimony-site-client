@@ -54,32 +54,44 @@ const Navigation = () => {
     <div className="nav-gradient">
       <Menu isOpen={isMenuOpen} onStateChange={handleMenuStateChange}>
         {/* Menu content */}
-        <Link to="/" onClick={closeMenu}>
-          Home
-        </Link>
-        <Link to="/about" onClick={closeMenu}>
-          About Us
-        </Link>
-        {/* Other menu items */}
-        {/* Example: */}
-        {user && (
-          <Link to="/my-profile" onClick={closeMenu}>
-            My Profile
+        <li>
+          <Link to="/" onClick={closeMenu}>
+            Home
           </Link>
-        )}
-        {/* Add additional links and logic based on your requirements */}
+        </li>
+        <li>
+          <Link to="/about" onClick={closeMenu}>
+            About Us
+          </Link>
+        </li>
+        <li>
+          <Link to="/faq" onClick={closeMenu}>
+            FAQ
+          </Link>
+        </li>
+        <li>
+          <Link to="/guid" onClick={closeMenu}>
+            Guide
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" onClick={closeMenu}>
+            Contact
+          </Link>
+        </li>
       </Menu>
       <Container>
         <div className="navbar flex items-center justify-between bg-base-100">
-          <div className="navbar-start gap-2">
-            <img className="w-12 h-12" src={logo} alt="logo" />
-            <p className="text-2xl font-bold">
+          <div className="md:hidden"></div>
+          <div className="flex-start flex-center gap-1 md:gap-2">
+            <img className="md:w-12 md:h-12 w-9 h-9" src={logo} alt="logo" />
+            <p className="md:text-2xl text-xl font-bold">
               <span className="text-[#02788F]">Wedding</span>
               <span className="text-[#ED3284]">Wonders</span>
             </p>
           </div>
-          <div>
-            <ul className="flex gap-7 items-center justify-between navbar-center">
+          <div className="hidden md:inline navbar-center">
+            <ul className="flex gap-7 items-center justify-between ">
               <li>
                 <Link to="/" className="text-xl">
                   Home

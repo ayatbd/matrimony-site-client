@@ -24,6 +24,10 @@
     width: unset;
 }
 
+@media only screen and (min-width: 768px) {}
+
+/* _____________________________ */
+
 .bg-base-100 {
     --tw-bg-opacity: 1;
     background-color: unset;
@@ -39,10 +43,10 @@
     line-height: 1.45em;
 }
 
-/* burger menu css */
+/*___________ burger menu css ____________*/
 /* Position and sizing of burger button */
 .bm-burger-button {
-    position: fixed;
+    position: absolute;
     width: 20px;
     height: 16px;
     left: 30px;
@@ -106,6 +110,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (min-width: 768px) {
+    .bm-burger-button {
+        display: none;
+    }
 }
 
 /* ________________________________ */
