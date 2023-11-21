@@ -6,9 +6,9 @@ import { FaGenderless } from "react-icons/fa";
 
 const QuickAccess = () => {
   return (
-    <div className="bg-[#530E29] ">
+    <div className="bg-[#530E29] md:py-auto py-20">
       <Container>
-        <div className="h-[100vh]  flex flex-col items-center justify-center">
+        <div className="md:h-[100vh]  flex flex-col items-center justify-center">
           <div className="space-y-12">
             <div className="text-center space-y-4">
               <p className="text-[#D02D77]">Quick Access</p>
@@ -16,7 +16,7 @@ const QuickAccess = () => {
                 How WeddingWonders Works
               </h2>
             </div>
-            <div className="flex gap-5">
+            <div className="flex md:flex-row flex-col items-center gap-5">
               <div className="py-10 flex flex-col items-center px-3 space-y-3 rounded-lg bg-white">
                 <AiOutlineUserAdd size="36" className="text-[#9D2D7D]" />
                 <p className="text-xl text-center">Create Biodata</p>

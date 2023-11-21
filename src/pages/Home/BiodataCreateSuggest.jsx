@@ -22,17 +22,18 @@ const BiodataCreateSuggest = () => {
   }, [biodatas, isLoading, user]);
 
   return (
-    <div className="createBio-bg h-[100vh]">
+    <div className="createBio-bg md:h-[100vh] py-20">
       <Container>
-        <div className="pt-20 flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
           <h1 className="text-4xl text-[#530E29] font-bold text-center">
             Create Biodata In <span className="pink">WeddingWonders</span>
             <br />
             Completely Free
           </h1>
           <img className="w-28 h-28" src={flower} alt="" />
-          <div className="flex items-center justify-center gap-10">
+          <div className="w-full flex flex-col md:flex-row items-center justify-center gap-5 md:gap-10">
             <button
+              className="w-full"
               onClick={() => document.getElementById("my_modal_2").showModal()}
             >
               {!submitted ? (
@@ -52,7 +53,7 @@ const BiodataCreateSuggest = () => {
               )}
             </button>
             <Dialog my_modal_2="my_modal_2"></Dialog>
-            <button>
+            <button className="w-full">
               <Link>
                 <span className="border bottom-shadow rounded-xl px-5 py-7 flex gap-4 flex-col items-center justify-center">
                   <FaYoutube color="red" size="45" />

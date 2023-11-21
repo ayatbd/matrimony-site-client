@@ -14,8 +14,8 @@ const Statistics = () => {
               <span className="pink">WeddingWonders</span> User Statistics
             </h1>
           </div>
-          <div className="mt-16 flex items-center justify-center">
-            <div className="w-1/2">
+          <div className="mt-16 md:flex items-center justify-center">
+            <div className="md:w-1/2">
               <div className="relative">
                 <img
                   className="w-[250px] h-[320px] rounded-xl"
@@ -25,28 +25,29 @@ const Statistics = () => {
                 <img
                   className="absolute border-l-8 border-t-8 border-white h-[180px] w-[250px] bottom-0 left-[15%] rounded-tr-[50px] rounded-bl-[50px]"
                   src={img2}
-                  alt=""
                 />
               </div>
             </div>
-            <div className="w-1/2 space-y-5">
+            <div className="md:w-1/2 space-y-5">
               <div>
-                <h2 className="text-3xl text-[#530E29] font-bold">
+                <h2 className="text-3xl text-center md:text-start text-[#530E29] font-bold">
                   Welcome to
                 </h2>
-                <h3 className="pink text-2xl font-bold">Wedding Matrimony</h3>
+                <h3 className="pink text-center md:text-start text-2xl font-bold">
+                  Wedding Matrimony
+                </h3>
               </div>
 
-              <p>
+              <p className="text-center md:text-start">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Quisquam harum provident velit excepturi doloremque voluptates
                 distinctio dicta accusamus dolore nostrum.
               </p>
-              <p>
+              <p className="text-center md:text-start">
                 <Link className="pink">Click here</Link> to start your matrimony
                 service now
               </p>
-              <p>
+              <p className="text-center md:text-start">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Laudantium ut, nisi cupiditate cum reprehenderit tempora
                 pariatur qui sed totam. Amet!

@@ -25,7 +25,6 @@ const Finding = () => {
       const matchesAddress =
         selectedAddress === "All" ||
         biodata.present_ads_dis === selectedAddress;
-
       return matchesGender && matchesMaritalStatus && matchesAddress;
     });
   };
@@ -47,7 +46,7 @@ const Finding = () => {
           </div>
           <div>
             <form onSubmit={handleSubmit}>
-              <div className="flex items-end justify-between gap-5 pt-9">
+              <div className="flex flex-col md:flex-row items-end justify-between gap-5 pt-9">
                 <div className="w-full space-y-3">
                   <label htmlFor="" className="text-[19px] font-[600]">
                     I'm looking for

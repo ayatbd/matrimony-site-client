@@ -1,4 +1,5 @@
 import { Link, Navigate } from "react-router-dom";
+import { slide as Menu } from "react-burger-menu";
 import logo from "../assets/images/logos/logo.png";
 import profile from "../assets/images/user.png";
 import "../pages/css/page.css";
@@ -13,6 +14,15 @@ const Navigation = () => {
   const [isAdmin] = useAdmin();
   const [biodatas, , isLoading] = useBiodata();
   const [submitted, setSubmitted] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuStateChange = (state) => {
+    setIsMenuOpen(state.isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   useEffect(() => {
     if (user && !isLoading) {
@@ -42,6 +52,23 @@ const Navigation = () => {
 
   return (
     <div className="nav-gradient">
+      <Menu isOpen={isMenuOpen} onStateChange={handleMenuStateChange}>
+        {/* Menu content */}
+        <Link to="/" onClick={closeMenu}>
+          Home
+        </Link>
+        <Link to="/about" onClick={closeMenu}>
+          About Us
+        </Link>
+        {/* Other menu items */}
+        {/* Example: */}
+        {user && (
+          <Link to="/my-profile" onClick={closeMenu}>
+            My Profile
+          </Link>
+        )}
+        {/* Add additional links and logic based on your requirements */}
+      </Menu>
       <Container>
         <div className="navbar flex items-center justify-between bg-base-100">
           <div className="navbar-start gap-2">

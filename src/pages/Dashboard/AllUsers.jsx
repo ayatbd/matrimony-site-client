@@ -3,7 +3,6 @@ import useAxiosSecure from "./../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import Loader from "../Shared/Loader";
 import Container from "../Shared/Container";
-import useMale from "../../hooks/useMale";
 
 const AllUsers = () => {
   const [axiosSecure] = useAxiosSecure();
@@ -114,7 +113,6 @@ const AllUsers = () => {
             </table>
           </div>
         </div>
-        ;
       </Container>
     </div>
   );

@@ -8,15 +8,16 @@ import { AiFillStar } from "react-icons/ai";
 
 const HeroSection = () => {
   return (
-    <div className="navHero-bg w-full h-[90vh]">
+    <div className="navHero-bg w-full md:h-[90vh]">
       <Container>
-        <div className="flex flex-col gap-11 items-start pt-24">
-          <h1 className="text-4xl text-white font-bold">
+        <div className="flex flex-col gap-5 md:gap-11 items-center md:items-start pt-16 md:pt-24 px-4">
+          <h1 className="text-4xl text-center md:text-start text-white font-bold">
             Bangladeshi Muslim <br /> <span className="pink">Matrimony</span>
           </h1>
-          <p className="text-white">
-            When a person gets married he has completed half of his <br /> deen,
-            so let him fear Allah with regard to the other half.
+          <p className="text-white text-center md:text-start">
+            When a person gets married he has completed half of his{" "}
+            <br className="hidden md:inline" /> deen, so let him fear Allah with
+            regard to the other half.
           </p>
           <div className="avatar-group -space-x-6">
             <div className="avatar">

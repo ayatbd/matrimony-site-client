@@ -47,55 +47,63 @@ const BiodataInfo = () => {
                 />
                 <p className="text-[28px] font-semibold">Biodata No.</p>
               </div>
-              <div className="flex w-full flex-col items-center p-3">
-                <table className="text-center w-full text-sm font-light">
-                  <tbody className="flex w-full flex-col gap-2">
+              <div className="">
+                <table className="text-center mt-5 w-full text-sm font-light">
+                  <tbody className="w-full">
                     <tr className="border dark:border-neutral-500 tr-width">
-                      <td className="text-start font-semibold px-6 py-2 tr-border ">
-                        Academic Medium
+                      <td className="text-start font-semibold px-6 py-[6px] tr-border ">
+                        Gender
                       </td>
-                      <td className="font-[400] text-start px-6 py-2">
-                        Thornton
+                      <td className="font-[400] text-start px-6 py-[6px]">
+                        {myBiodata.biodata_type}
                       </td>
                     </tr>
                     <tr className="border dark:border-neutral-500 tr-width">
-                      <td className="text-start font-semibold px-6 py-2 tr-border ">
-                        Academic Medium
+                      <td className="text-start font-semibold px-6 py-[6px] tr-border ">
+                        Marital Status
                       </td>
-                      <td className="font-[400] text-start px-6 py-2">
-                        {myBiodata.academic_medium}
-                      </td>
-                    </tr>
-                    <tr className="border dark:border-neutral-500 tr-width">
-                      <td className="text-start font-semibold px-6 py-2 tr-border ">
-                        Academic Medium
-                      </td>
-                      <td className="font-[400] text-start px-6 py-2">
-                        Thornton
+                      <td className="font-[400] text-start px-6 py-[6px]">
+                        {myBiodata.marital_status}
                       </td>
                     </tr>
                     <tr className="border dark:border-neutral-500 tr-width">
-                      <td className="text-start font-semibold px-6 py-2 tr-border ">
-                        Academic Medium
+                      <td className="text-start font-semibold px-6 py-[6px] tr-border ">
+                        Born
                       </td>
-                      <td className="font-[400] text-start px-6 py-2">
-                        Thornton
-                      </td>
-                    </tr>
-                    <tr className="border dark:border-neutral-500 tr-width">
-                      <td className="text-start font-semibold px-6 py-2 tr-border ">
-                        Academic Medium
-                      </td>
-                      <td className="font-[400] text-start px-6 py-2">
-                        Thornton
+                      <td className="font-[400] text-start px-6 py-[6px]">
+                        {myBiodata.born_year}
                       </td>
                     </tr>
                     <tr className="border dark:border-neutral-500 tr-width">
-                      <td className="text-start font-semibold px-6 py-2 tr-border ">
-                        Academic Medium
+                      <td className="text-start font-semibold px-6 py-[6px] tr-border ">
+                        Height
                       </td>
-                      <td className="font-[400] text-start px-6 py-2">
-                        {myBiodata.academic_medium}
+                      <td className="font-[400] text-start px-6 py-[6px]">
+                        {myBiodata.height}' Inches
+                      </td>
+                    </tr>
+                    <tr className="border dark:border-neutral-500 tr-width">
+                      <td className="text-start font-semibold px-6 py-[6px] tr-border ">
+                        Weight
+                      </td>
+                      <td className="font-[400] text-start px-6 py-[6px]">
+                        {myBiodata.weight} kg
+                      </td>
+                    </tr>
+                    <tr className="border dark:border-neutral-500 tr-width">
+                      <td className="text-start font-semibold px-6 py-[6px] tr-border ">
+                        Complexion
+                      </td>
+                      <td className="font-[400] text-start px-6 py-[6px]">
+                        {myBiodata.complexion}
+                      </td>
+                    </tr>
+                    <tr className="border dark:border-neutral-500 tr-width">
+                      <td className="text-start font-semibold px-6 py-[6px] tr-border ">
+                        Blood Group
+                      </td>
+                      <td className="font-[400] text-start px-6 py-[6px]">
+                        {myBiodata.blood_group}
                       </td>
                     </tr>
                   </tbody>
