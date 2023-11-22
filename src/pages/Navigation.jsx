@@ -82,9 +82,9 @@ const Navigation = () => {
       </Menu>
       <Container>
         <div className="navbar flex items-center justify-between bg-base-100">
-          <div className="md:hidden"></div>
-          <div className="flex-start flex-center gap-1 md:gap-2">
-            <img className="md:w-12 md:h-12 w-9 h-9" src={logo} alt="logo" />
+          <div className="md:hidden navbar-start"></div>
+          <div className="navbar-center gap-1">
+            <img className="md:w-10 md:h-10 w-8 h-8" src={logo} alt="logo" />
             <p className="md:text-2xl text-xl font-bold">
               <span className="text-[#02788F]">Wedding</span>
               <span className="text-[#ED3284]">Wonders</span>
@@ -121,27 +121,7 @@ const Navigation = () => {
           </div>
           {user ? (
             <div className="navbar-end gap-2">
-              {/* <button
-                onClick={handleLogOut}
-                className="text-xl bottom-shadow bg-[#E33283] text-white rounded-full py-2 px-6"
-              >
-                <Link to="/registration">Sign Out</Link>
-              </button> */}
-
-              {/* <button className="text-xl bottom-shadow bg-[#E33283] text-white rounded-full py-2 px-6">
-                <Link to="/dashboard/home">Dashboard</Link>
-              </button> */}
               <div className="dropdown dropdown-hover">
-                {/* <div
-                  onClick={() => setIsOpen(!isOpen)}
-                  tabIndex={0}
-                  className="btn mr-4 btn-circle avatar tooltip ml-2"
-                >
-                  <img
-                    className="w-10 rounded-full border-2 p-1"
-                    src={user.photoURL ? user.photoURL : profile}
-                  />
-                </div> */}
                 <label tabIndex={0} className="btn m-1 btn-circle">
                   <img className="rounded-full" src={profile} />
                 </label>
@@ -211,11 +191,8 @@ const Navigation = () => {
               </div>
             </div>
           ) : (
-            <div className="navbar-end gap-4">
-              <button className="text-xl bottom-shadow bg-[#E33283] text-white rounded-full py-2 px-6">
-                <Link to="/registration">Registration</Link>
-              </button>
-              <button className="text-xl bottom-shadow text-[#E33283] py-2 px-6 rounded-full border border-[#E33283]">
+            <div className="navbar-end">
+              <button className="md:text-xl bottom-shadow text-[#E33283] py-[6px] md:py-2 px-4 md:px-6 rounded-full border border-[#E33283]">
                 <Link to="/signin">Sign In</Link>
               </button>
             </div>

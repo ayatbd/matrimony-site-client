@@ -14,6 +14,7 @@ import BiodataInfo from "../pages/Dashboard/BiodataInfo/BiodataInfo";
 import AllBiodata from "../pages/AllBiodata";
 import CreateBiodata from "../pages/Dashboard/BioForm/CreateBiodata";
 import SingleBiodata from "../pages/SingleBiodata";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -55,7 +56,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "mybioform",
-        element: <CreateBiodata />,
+        element: (
+          <PrivateRoute>
+            <CreateBiodata />
+          </PrivateRoute>
+        ),
       },
       {
         path: "allusers",
