@@ -248,3 +248,18 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bio-form div label {
     padding-top: 0;
 }
+
+/* scroll to top button css  */
+
+.scroll-to-top {
+    background-color: #530E29 !important;
+    border-radius: 50% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-to-top:hover {
+    background-color: #77254a !important;
+}

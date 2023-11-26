@@ -41,9 +41,12 @@ const AllBiodataTable = () => {
       // If already approved, do nothing
       return;
     }
-    fetch(`http://localhost:5000/biodata/approve/${biodata._id}`, {
-      method: "PATCH",
-    })
+    fetch(
+      `https://matrimony-web-server.vercel.app/biodata/approve/${biodata._id}`,
+      {
+        method: "PATCH",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -66,12 +69,12 @@ const AllBiodataTable = () => {
   return (
     <div>
       <Container>
-        <div className="text-gray-900 bg-gray-200">
+        <div className="text-gray-900 bg-gray-200 overflow-hidden">
           <div className="p-4 flex">
             <h1 className="text-2xl md:text-3xl">Biodata</h1>
           </div>
-          <div className="px-3 py-4 flex justify-center">
-            <table className="w-full text-md bg-white shadow-md rounded mb-4">
+          <div className="py-4 overflow-x-auto">
+            <table className="w-full text-md bg-white shadow-md rounded mb-4 ">
               <tbody>
                 <tr className="border-b">
                   <th className="text-left p-3 px-5">Name</th>

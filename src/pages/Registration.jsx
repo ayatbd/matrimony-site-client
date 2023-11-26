@@ -22,7 +22,7 @@ const Registration = () => {
     createUser(email, password)
       .then((result) => {
         const saveUser = { name, email };
-        fetch("http://localhost:5000/users", {
+        fetch("https://matrimony-web-server.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -60,7 +60,7 @@ const Registration = () => {
         name: loggedInUser.displayName,
         email: loggedInUser.email,
       };
-      fetch("http://localhost:5000/users", {
+      fetch("https://matrimony-web-server.vercel.app/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",

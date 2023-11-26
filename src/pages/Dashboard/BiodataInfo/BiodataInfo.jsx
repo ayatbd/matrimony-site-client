@@ -34,7 +34,6 @@ const BiodataInfo = () => {
   if (isLoading) return <Loader></Loader>;
   return (
     <div className="w-full py-14">
-      <ScrollToTop top="800" color="#fff" smooth />
       <Container>
         <div>
           <div className="flex md:flex-row flex-col items-start justify-between gap-6">

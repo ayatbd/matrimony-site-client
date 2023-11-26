@@ -16,7 +16,6 @@ const SingleBiodata = () => {
   const biodata = useLoaderData();
   return (
     <div className="w-full py-10">
-      <ScrollToTop top="800" color="#fff" smooth />
       <Container>
         <div>
           <div className="flex md:flex-row flex-col items-start justify-between gap-6">

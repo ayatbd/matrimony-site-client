@@ -31,14 +31,6 @@ const CreateBiodata = () => {
 
   const [biodatas, refetch, isLoading] = useBiodata();
 
-  // const { data: biodatas = [], refetch } = useQuery({
-  //   queryKey: ["biodata"],
-  //   queryFn: async () => {
-  //     const res = await axiosSecure("/biodata");
-  //     return res.data;
-  //   },
-  // });
-
   const isUserSubmitted = biodatas.some(
     (data) => data.userEmail === user.email
   );
@@ -47,7 +39,7 @@ const CreateBiodata = () => {
     setLoading(true);
     console.log(data);
     const updatedData = { userEmail: user.email, ...data };
-    fetch("http://localhost:5000/biodata", {
+    fetch("https://matrimony-web-server.vercel.app/biodata", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -74,7 +66,6 @@ const CreateBiodata = () => {
     <Container>
       <div className="w-full py-8">
         <div className="w-2/3">
-          <ScrollToTop top="600" color="#fff" smooth />
           <form onSubmit={handleSubmit(onSubmit)}>
             <GeneralInfo register={register}></GeneralInfo>
             <FamilyInfo register={register}></FamilyInfo>

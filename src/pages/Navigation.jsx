@@ -192,9 +192,11 @@ const Navigation = () => {
             </div>
           ) : (
             <div className="navbar-end">
-              <button className="md:text-xl bottom-shadow text-[#E33283] py-[6px] md:py-2 px-4 md:px-6 rounded-full border border-[#E33283]">
-                <Link to="/signin">Sign In</Link>
-              </button>
+              <Link to="/signin">
+                <button className="md:text-xl bottom-shadow text-[#E33283] py-[6px] md:py-2 px-4 md:px-6 rounded-full border border-[#E33283]">
+                  Sign In
+                </button>
+              </Link>
             </div>
           )}
         </div>

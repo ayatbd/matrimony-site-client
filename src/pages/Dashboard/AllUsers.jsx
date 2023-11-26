@@ -24,7 +24,7 @@ const AllUsers = () => {
   // make admin
   const handleAdminMaking = (user) => {
     console.log(user);
-    fetch(`http://localhost:5000/users/admin/${user._id}`, {
+    fetch(`https://matrimony-web-server.vercel.app/users/admin/${user._id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())
@@ -76,7 +76,7 @@ const AllUsers = () => {
           <div className="p-4 flex">
             <h1 className="text-3xl">Users</h1>
           </div>
-          <div className="px-3 py-4 flex justify-center">
+          <div className="md:px-3 py-4 overflow-x-auto">
             <table className="w-full text-md bg-white shadow-md rounded mb-4">
               <tbody>
                 <tr className="border-b">

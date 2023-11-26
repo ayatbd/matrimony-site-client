@@ -3,10 +3,9 @@ import ScrollToTop from "react-scroll-to-top";
 
 const Footer = () => {
   return (
-    <div className="bg-[#522B79] ">
+    <div className="bg-[#530E29] ">
       <Container>
         <footer className="footer footer-center p-10 text-base-content rounded">
-          <ScrollToTop top="700" smooth color="fff" />
           <nav className="grid grid-flow-col gap-4">
             <a className="link text-white link-hover">About us</a>
             <a className="link text-white link-hover">Contact</a>
@@ -20,6 +19,7 @@ const Footer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
+                  color="#fff"
                   viewBox="0 0 24 24"
                   className="fill-current"
                 >
@@ -31,6 +31,7 @@ const Footer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
+                  color="#fff"
                   viewBox="0 0 24 24"
                   className="fill-current"
                 >
@@ -42,6 +43,7 @@ const Footer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
+                  color="#fff"
                   viewBox="0 0 24 24"
                   className="fill-current"
                 >

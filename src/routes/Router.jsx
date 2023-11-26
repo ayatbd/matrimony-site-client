@@ -78,7 +78,7 @@ export const router = createBrowserRouter([
         path: "/viewbiodata/:id",
         element: <SingleBiodata />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/biodata/${params.id}`),
+          fetch(`https://matrimony-web-server.vercel.app/biodata/${params.id}`),
       },
     ],
   },
