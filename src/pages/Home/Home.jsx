@@ -3,6 +3,7 @@ import Finding from "./Finding";
 import QuickAccess from "./QuickAccess";
 import Statistics from "./Statistics";
 import BiodataCreateSuggest from "./BiodataCreateSuggest";
+import PhotoGallery from "./PhotoGallery";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <BiodataCreateSuggest />
       <QuickAccess />
       <Statistics />
+      <PhotoGallery />
     </div>
   );
 };

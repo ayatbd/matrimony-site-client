@@ -57,7 +57,7 @@ const Statistics = () => {
                   <BiPhoneCall className="bg-[#E33283] text-white border border border-indigo-600 p-2 w-8 h-8 rounded-full" />
                   <div>
                     <p>Enquiry</p>
-                    <p className="text-black font-bold">+8801946574645</p>
+                    <p className="text-black font-bold">1946574645</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-1">
