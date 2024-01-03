@@ -169,7 +169,7 @@ const Footer = () => {
                     </li>
                     <li className="mt-3">
                       <a className="text-gray-400 cursor-pointer hover:text-gray-300">
-                        example-7890
+                        example-9999
                       </a>
                     </li>
                   </nav>
@@ -182,7 +182,7 @@ const Footer = () => {
       <div className="bg-[#530E29] border-t border-gray-600">
         <div className="container px-5 py-4 mx-auto">
           <p className="text-sm text-white capitalize xl:text-center">
-            © 2020 All rights reserved{" "}
+            © 2020 All rights reserved
           </p>
         </div>
       </div>
