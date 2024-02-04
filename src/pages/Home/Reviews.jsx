@@ -31,9 +31,9 @@ const Reviews = () => {
             >
               <SwiperSlide>
                 <div className="flex items-center justify-between gap-20">
-                  <div>
-                    <div>
-                      <img src="" alt="" />
+                  <div className="border-2 px-7 py-3 rounded-xl">
+                    <img src="" alt="" />
+                    <div className="space-y-3">
                       <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Minus accusantium voluptatibus quasi nesciunt,
@@ -41,7 +41,7 @@ const Reviews = () => {
                         officia voluptate corporis nam recusandae sit
                         perspiciatis mollitia, officiis error!
                       </p>
-                      <p>Mst. Sadia Akter</p>
+                      <p className="text-lg font-bold">Mst. Sadia Akter</p>
                       <p>Dhaka</p>
                     </div>
                   </div>
