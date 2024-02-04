@@ -3,6 +3,7 @@ import Container from "../Shared/Container";
 import bannerImg1 from "../../assets/images/banner-img-1.jpg";
 import bannerImg2 from "../../assets/images/banner-img-2.jpg";
 import bannerImg3 from "../../assets/images/banner-img-3.jpg";
+import bannerImg4 from "../../assets/images/banner-img-4.jpg";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -95,7 +96,7 @@ const Reviews = () => {
                   <div className="border-2 px-7 py-3 rounded-xl flex flex-col items-center">
                     <img
                       className="w-20 h-20 rounded-full"
-                      src={bannerImg1}
+                      src={bannerImg4}
                       alt=""
                     />
                     <div className="text-center">
@@ -106,7 +107,7 @@ const Reviews = () => {
                         connections. Highly recommended for those seeking a life
                         partner."
                       </p>
-                      <p className="text-lg font-bold">Mst. Sadia Akter</p>
+                      <p className="text-lg font-bold">Shamima Sultana</p>
                       <p>Dhaka</p>
                     </div>
                   </div>
