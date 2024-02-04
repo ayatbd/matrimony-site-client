@@ -1,5 +1,8 @@
 import flower from "../../assets/images/flower.png";
 import Container from "../Shared/Container";
+import bannerImg1 from "../../assets/images/banner-img-1.jpg";
+import bannerImg2 from "../../assets/images/banner-img-2.jpg";
+import bannerImg3 from "../../assets/images/banner-img-3.jpg";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -30,48 +33,85 @@ const Reviews = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <div className="flex items-center justify-between gap-20">
-                  <div className="border-2 px-7 py-3 rounded-xl">
-                    <img src="" alt="" />
-                    <div className="space-y-3">
-                      <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Minus accusantium voluptatibus quasi nesciunt,
-                        possimus, aut placeat vitae eius debitis aspernatur
-                        officia voluptate corporis nam recusandae sit
-                        perspiciatis mollitia, officiis error!
+                <div className="grid grid-cols-3 gap-20 px-9">
+                  <div className="border-2 px-7 py-3 rounded-xl flex flex-col items-center">
+                    <img
+                      className="w-20 h-20 rounded-full"
+                      src={bannerImg1}
+                      alt=""
+                    />
+                    <div className="text-center">
+                      <p className="my-5">
+                        "Exceptional matrimony website—user-friendly interface,
+                        extensive profiles, and effective matchmaking tools.
+                        Seamless experience, facilitating meaningful
+                        connections. Highly recommended for those seeking a life
+                        partner."
                       </p>
                       <p className="text-lg font-bold">Mst. Sadia Akter</p>
                       <p>Dhaka</p>
                     </div>
                   </div>
-                  <div>
-                    <img src="" alt="" />
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Minus accusantium voluptatibus quasi nesciunt, possimus,
-                      aut placeat vitae eius debitis aspernatur officia
-                      voluptate corporis nam recusandae sit perspiciatis
-                      mollitia, officiis error!
-                    </p>
-                    <p>Mst. Sadia Akter</p>
-                    <p>Dhaka</p>
+                  <div className="border-2 px-7 py-3 rounded-xl flex flex-col items-center">
+                    <img
+                      className="w-20 h-20 rounded-full"
+                      src={bannerImg2}
+                      alt=""
+                    />
+                    <div className="text-center">
+                      <p className="my-5">
+                        "Outstanding matrimony platform—impressive profiles,
+                        intuitive navigation, and personalized matchmaking. A
+                        reliable choice for those in pursuit of genuine
+                        connections and lasting relationships. Highly
+                        commendable!"
+                      </p>
+                      <p className="text-lg font-bold">Mohammad Sami</p>
+                      <p>Chottogram</p>
+                    </div>
                   </div>
-                  <div>
-                    <img src="" alt="" />
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Minus accusantium voluptatibus quasi nesciunt, possimus,
-                      aut placeat vitae eius debitis aspernatur officia
-                      voluptate corporis nam recusandae sit perspiciatis
-                      mollitia, officiis error!
-                    </p>
-                    <p>Mst. Sadia Akter</p>
-                    <p>Dhaka</p>
+                  <div className="border-2 px-7 py-3 rounded-xl flex flex-col items-center">
+                    <img
+                      className="w-20 h-20 rounded-full"
+                      src={bannerImg3}
+                      alt=""
+                    />
+                    <div className="text-center">
+                      <p className="my-5">
+                        "Remarkable matrimony website—innovative features,
+                        comprehensive profiles, and a seamless user experience.
+                        Streamlined matchmaking process for meaningful
+                        connections. A top-tier choice for those seeking
+                        lifelong companionship."
+                      </p>
+                      <p className="text-lg font-bold">Arifur Rahman</p>
+                      <p>Barishal</p>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
+              <SwiperSlide>
+                <div className="grid grid-cols-3 gap-20 px-9">
+                  <div className="border-2 px-7 py-3 rounded-xl flex flex-col items-center">
+                    <img
+                      className="w-20 h-20 rounded-full"
+                      src={bannerImg1}
+                      alt=""
+                    />
+                    <div className="text-center">
+                      <p className="my-5">
+                        "Exceptional matrimony website—user-friendly interface,
+                        extensive profiles, and effective matchmaking tools.
+                        Seamless experience, facilitating meaningful
+                        connections. Highly recommended for those seeking a life
+                        partner."
+                      </p>
+                      <p className="text-lg font-bold">Mst. Sadia Akter</p>
+                      <p>Dhaka</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
               <SwiperSlide>Slide 3</SwiperSlide>
             </Swiper>
           </>
