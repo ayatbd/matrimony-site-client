@@ -4,6 +4,7 @@ import QuickAccess from "./QuickAccess";
 import Statistics from "./Statistics";
 import BiodataCreateSuggest from "./BiodataCreateSuggest";
 import PhotoGallery from "./PhotoGallery";
+import Reviews from "./Reviews";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <BiodataCreateSuggest />
       <QuickAccess />
       <Statistics />
+      <Reviews />
       <PhotoGallery />
     </div>
   );
