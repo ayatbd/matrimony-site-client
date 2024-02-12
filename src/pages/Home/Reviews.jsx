@@ -17,7 +17,7 @@ import "../css/page.css";
 import { Navigation } from "swiper/modules";
 const Reviews = () => {
   return (
-    <div className="md:py-auto py-20">
+    <div className="md:py-auto py-20 hidden md:block">
       <Container>
         <div>
           <div className="flex flex-col justify-center items-center space-y-3">
@@ -34,7 +34,7 @@ const Reviews = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <div className="grid grid-cols-3 gap-20 px-9">
+                <div className="md:grid grid-cols-3 gap-20 px-9">
                   <div className="border-2 px-7 py-3 rounded-xl flex flex-col items-center">
                     <img
                       className="w-20 h-20 rounded-full"

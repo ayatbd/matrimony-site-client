@@ -14,8 +14,8 @@ const Statistics = () => {
               <span className="pink">WeddingWonders</span> User Statistics
             </h1>
           </div>
-          <div className="mt-16 md:flex items-center justify-center">
-            <div className="md:w-1/2">
+          <div className="mt-16 md:flex items-center justify-center space-y-16 md:space-y-0">
+            <div className="flex-1">
               <div className="relative">
                 <img
                   className="w-[250px] h-[320px] rounded-xl"
@@ -28,7 +28,7 @@ const Statistics = () => {
                 />
               </div>
             </div>
-            <div className="md:w-1/2">
+            <div className="flex-1 space-y-8">
               <div>
                 <h2 className="text-3xl text-center md:text-start text-[#530E29] font-bold">
                   Welcome to
@@ -52,16 +52,16 @@ const Statistics = () => {
                 Laudantium ut, nisi cupiditate cum reprehenderit tempora
                 pariatur qui sed totam. Amet!
               </p>
-              <div className="flex items-center gap-5">
+              <div className="flex justify-center items-center gap-5">
                 <div className="flex items-center justify-center gap-1">
-                  <BiPhoneCall className="bg-[#E33283] text-white border border border-indigo-600 p-2 w-8 h-8 rounded-full" />
+                  <BiPhoneCall className="bg-[#E33283] text-white border border-indigo-600 p-2 w-8 h-8 rounded-full" />
                   <div>
                     <p>Enquiry</p>
                     <p className="text-black font-bold">1946574645</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-1">
-                  <BiPhoneCall className="bg-[#E33283] text-white border border border-indigo-600 p-2 w-8 h-8 rounded-full" />
+                  <BiPhoneCall className="bg-[#E33283] text-white border border-indigo-600 p-2 w-8 h-8 rounded-full" />
                   <div>
                     <p>Get Support</p>
                     <p className="text-black font-bold">info@gmail.com</p>
