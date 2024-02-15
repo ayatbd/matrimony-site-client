@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="w-full text-white body-font">
             <div className="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
               <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
-                <div className="">
+                <div className="flex justify-center items-center md:justify-start">
                   <img
                     className="md:w-10 md:h-10 w-8 h-8"
                     src={logo}
