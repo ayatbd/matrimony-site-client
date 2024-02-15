@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="w-full text-white body-font">
             <div className="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
               <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
-                <div className="flex flex-col items-start">
+                <div className="">
                   <img
                     className="md:w-10 md:h-10 w-8 h-8"
                     src={logo}
@@ -16,7 +16,7 @@ const Footer = () => {
                   />
                 </div>
                 <p className="mt-2 text-sm text-white">
-                  Design,, Code and Ship!
+                  Design, Code and Ship!
                 </p>
                 <div className="mt-4">
                   <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
