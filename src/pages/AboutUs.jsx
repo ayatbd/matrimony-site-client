@@ -16,7 +16,7 @@ const AboutUs = () => {
             <p className="text-[18px]">
               Indeed, all praise belongs to Allah. We seek refuge in Him from
               the evils of our hearts and the evils of our deeds. Blessings and
-              peace be upon the Messenger (PBUH).
+              peace be upon the Messenger (PBUH)...
               <br />
               <br />
               Marriage is a special blessing of Allah Almighty and an important
@@ -30,7 +30,7 @@ const AboutUs = () => {
               education and not according to the Islamic Shar'i rules. As a
               result, marriage has become difficult and the society is burdened
               with various degradations including adultery, adultery, rape,
-              suicide.
+              suicide..
               <br />
               <br />
               On the other hand, it has become very difficult for those who are
