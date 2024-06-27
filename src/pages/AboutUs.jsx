@@ -30,7 +30,7 @@ const AboutUs = () => {
               education and not according to the Islamic Shar'i rules. As a
               result, marriage has become difficult and the society is burdened
               with various degradations including adultery, adultery, rape,
-              suicide..
+              suicide.
               <br />
               <br />
               On the other hand, it has become very difficult for those who are
@@ -45,7 +45,7 @@ const AboutUs = () => {
               religious matchmakers. Encouraging marriage by breaking all bad
               culture of the Jahili society, making everyone aware against
               dowry- an eternal curse for the bride's family and popularizing
-              Sunnah marriage with cash dowry. <br />
+              Sunnah marriage with cash dowry.. <br />
               <br />
               To make it easier to find a religious matchmaker, we have
               far-reaching plans which we are constantly researching. We are

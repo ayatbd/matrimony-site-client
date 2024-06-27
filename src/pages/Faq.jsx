@@ -38,7 +38,7 @@ const items = [
     id: "05",
     quest: "I have published my biodata but why is biodata not approved?",
     answer:
-      "Video tutorial on how to submit biodata (must watch the full video otherwise there is a possibility of error.",
+      "Video tutorial on how to submit biodata (must watch the full video otherwise there is a possibility of error..",
   },
   {
     id: "06",

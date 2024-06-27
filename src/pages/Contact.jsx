@@ -8,7 +8,7 @@ const Contact = () => {
       <Container>
         <div className="my-10">
           <p className="text-center text-black text-xl">
-            For any query, please fill out the form bellow and set it to us..
+            For any query,, please fill out the form bellow and set it to us..
             <br /> We'll contact you soon Insha-Allah
           </p>
         </div>
