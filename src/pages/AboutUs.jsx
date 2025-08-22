@@ -16,7 +16,7 @@ const AboutUs = () => {
             <p className="text-[18px]">
               Indeed, all praise belongs to Allah. We seek refuge in Him from
               the evils of our hearts and the evils of our deeds. Blessings and
-              peace be upon the Messenger (PBUH)...
+              peace be upon the Messenger (PBUH).
               <br />
               <br />
               Marriage is a special blessing of Allah Almighty and an important
@@ -45,7 +45,7 @@ const AboutUs = () => {
               religious matchmakers. Encouraging marriage by breaking all bad
               culture of the Jahili society, making everyone aware against
               dowry- an eternal curse for the bride's family and popularizing
-              Sunnah marriage with cash dowry.. <br />
+              Sunnah marriage with cash dowry. <br />
               <br />
               To make it easier to find a religious matchmaker, we have
               far-reaching plans which we are constantly researching. We are

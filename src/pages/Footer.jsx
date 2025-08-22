@@ -16,7 +16,7 @@ const Footer = () => {
                   />
                 </div>
                 <p className="mt-2 text-sm text-white">
-                  Design, Code and Ship!
+                  Design, Code and Ship!!
                 </p>
                 <div className="mt-4">
                   <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">

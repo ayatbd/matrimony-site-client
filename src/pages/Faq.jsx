@@ -38,7 +38,7 @@ const items = [
     id: "05",
     quest: "I have published my biodata but why is biodata not approved?",
     answer:
-      "Video tutorial on how to submit biodata (must watch the full video otherwise there is a possibility of error..",
+      "Video tutorial on how to submit biodata (must watch the full video otherwise there is a possibility of error.",
   },
   {
     id: "06",
@@ -50,9 +50,9 @@ const items = [
   {
     id: "07",
     quest:
-      "My studies are ongoing ie I am a student and I don't have any income yet, can I upload my biodata on the website?",
+      "My studies are ongoing ie I am a student and I don't have any income yet, can I upload my biodata on the website??",
     answer:
-      "Yes, you can upload. But as per our main conditions you must have your parent's permission to create biodata.",
+      "Yes, you can upload. But as per our main conditions you must have your parent's permission to create biodata..",
   },
 ];
 
