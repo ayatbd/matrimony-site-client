@@ -113,7 +113,6 @@ const Reviews = () => {
                   </div>
                 </div>
               </SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
             </Swiper>
           </>
           <div className="text-center my-14">
